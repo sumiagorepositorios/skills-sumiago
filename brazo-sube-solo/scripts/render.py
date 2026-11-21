@@ -94,7 +94,7 @@ def make_bg():
     c0 = np.array([70, 18, 26]); c1 = np.array([12, 10, 14])
     img = (c0 * (1 - r[..., None]).clip(0, 1) + c1 * r[..., None].clip(0, 1)).astype(np.uint8)
     bg = Image.fromarray(img).convert('RGBA'); d = ImageDraw.Draw(bg)
-    for yy in range(40, H, 60):
+    for yy in []:  # fondo liso, sin puntos
         for xx in range(30, W, 60): d.ellipse([xx-2, yy-2, xx+2, yy+2], fill=(255, 255, 255, 18))
     return bg
 OX0 = (W - MW) // 2 + 40; OY = 640

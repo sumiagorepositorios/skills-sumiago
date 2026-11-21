@@ -76,7 +76,7 @@ Trabaja en una carpeta vacía (por ejemplo `trabajo/`) y ejecuta los scripts des
 ## Estilo y reglas
 
 - Colores: amarillo `#FFD23F`, rojo `#E61E2D`, blanco; tarjetas oscuras con borde rojo.
-- Fondo rojo oscuro con degradado radial y puntos suaves; puerta de madera dibujada desde cero.
+- Fondo rojo oscuro con degradado radial liso (sin puntos); puerta de madera dibujada desde cero.
 - Subtítulos arriba, de 4 en 4 palabras, la palabra que suena en amarillo.
 - La mascota habla (boca según el volumen de la voz), parpadea y respira.
 - Sin logos ni el texto "Sumiago" en la mascota, sin números de día y sin marcas de otros creadores. La llamada a la acción es siempre "comenta VIRAL".
