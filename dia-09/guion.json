@@ -1,0 +1,380 @@
+{
+ "titulo": "Tu negocio en un solo enlace (Mi Portada paso a paso)",
+ "voz": "presentador",
+ "tema": "claro",
+ "musica": "alegre",
+ "pausa": 0.25,
+ "palabras_clave": [
+  "negocio",
+  "gratis",
+  "portada",
+  "enlace",
+  "registrarme",
+  "código",
+  "verificada",
+  "perfil",
+  "logo",
+  "enlaces",
+  "ia",
+  "whatsapp",
+  "redes",
+  "plantilla",
+  "membresía",
+  "tienda",
+  "qr",
+  "compártela",
+  "sumiago"
+ ],
+ "frases": [
+  {
+   "texto": "¿Tienes un negocio y tus clientes no saben dónde encontrarte?",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Tus clientes no saben",
+     "dónde encontrarte?"
+    ],
+    "tam": 54
+   }
+  },
+  {
+   "texto": "Con Sumiago creas gratis tu portada de negocio: un solo enlace con todo lo que ofreces. Te muestro cómo, paso a paso.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Ferrelandia",
+    "filas": [
+     {
+      "t": "Catálogo",
+      "rojo": true,
+      "palabra": "portada"
+     },
+     {
+      "t": "Cómo llegar",
+      "rojo": true,
+      "palabra": "enlace"
+     },
+     {
+      "t": "Promo de la semana",
+      "rojo": true,
+      "palabra": "ofreces"
+     }
+    ],
+    "boton": "Escríbenos",
+    "boton_palabra": "paso"
+   }
+  },
+  {
+   "texto": "Primero entra a sumiago.com y toca «Registrarme». Elige tu usuario y escribe tu nombre y tu apellido.",
+   "voz_texto": "Primero entra a sumiago punto com y toca registrarme. Elige tu usuario y escribe tu nombre y tu apellido.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "sumiago.com/registro",
+    "filas": [
+     {
+      "t": "Registrarme",
+      "rojo": true,
+      "palabra": "registrarme"
+     },
+     {
+      "t": "Usuario",
+      "palabra": "usuario"
+     },
+     {
+      "t": "Nombre",
+      "palabra": "nombre"
+     },
+     {
+      "t": "Apellido",
+      "palabra": "apellido"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Luego pon tu correo, tu país, tu WhatsApp y una contraseña. Acepta los términos y toca «Crear cuenta».",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Tus datos",
+    "filas": [
+     {
+      "t": "Correo",
+      "palabra": "correo"
+     },
+     {
+      "t": "País",
+      "palabra": "país"
+     },
+     {
+      "t": "WhatsApp",
+      "palabra": "whatsapp"
+     },
+     {
+      "t": "Contraseña",
+      "palabra": "contraseña"
+     },
+     {
+      "t": "Crear cuenta",
+      "rojo": true,
+      "palabra": "crear"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Te llega un código de seis dígitos a tu correo, lo escribes y tu cuenta queda verificada.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "482913",
+    "conteo": false,
+    "etiqueta": "Tu código de verificación",
+    "sub": "llega a tu correo"
+   }
+  },
+  {
+   "texto": "Ya dentro de tu panel, toca «Mi Portada» en el menú. Son siete pasos sencillos y ves cómo queda en vivo.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Mi Portada",
+    "items": [
+     {
+      "t": "Perfil",
+      "i": "persona"
+     },
+     {
+      "t": "Enlaces",
+      "i": "enlace"
+     },
+     {
+      "t": "WhatsApp",
+      "i": "chat"
+     },
+     {
+      "t": "Redes",
+      "i": "mundo"
+     },
+     {
+      "t": "Plantilla",
+      "i": "foto"
+     },
+     {
+      "t": "Diseño",
+      "i": "estrella"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En «Perfil» sube tu logo o tu foto, escribe el nombre de tu negocio y una bio corta, y elige tu dirección: sumiago.com/el-nombre-de-tu-negocio.",
+   "voz_texto": "En perfil sube tu logo o tu foto, escribe el nombre de tu negocio y una bio corta, y elige tu dirección: sumiago punto com, barra, el nombre de tu negocio.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Perfil",
+    "filas": [
+     {
+      "t": "Subir logo",
+      "rojo": true,
+      "palabra": "logo"
+     },
+     {
+      "t": "Nombre del negocio",
+      "palabra": "nombre"
+     },
+     {
+      "t": "Bio corta",
+      "palabra": "bio"
+     },
+     {
+      "t": "sumiago.com/tu-negocio",
+      "palabra": "dirección"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En «Enlaces» agrega lo importante: tu catálogo, tu ubicación, tus promociones. Si no sabes qué poner, toca «Ideas con IA», arrastra para ordenar y destaca el que más te importa.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Todos tus enlaces",
+    "items": [
+     {
+      "t": "Catálogo",
+      "i": "libro",
+      "palabra": "catálogo"
+     },
+     {
+      "t": "Ubicación",
+      "i": "ubicacion",
+      "palabra": "ubicación"
+     },
+     {
+      "t": "Promociones",
+      "i": "regalo",
+      "palabra": "promociones"
+     },
+     {
+      "t": "Ideas con IA",
+      "i": "ia",
+      "palabra": "ideas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Activa el botón de WhatsApp con tu número y un mensaje listo. Tu cliente toca el botón y te escribe al instante.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Ferrelandia",
+    "filas": [
+     {
+      "t": "Catálogo"
+     },
+     {
+      "t": "Cómo llegar"
+     },
+     {
+      "t": "Promo de la semana"
+     }
+    ],
+    "boton": "Escríbenos por WhatsApp",
+    "boton_palabra": "botón"
+   }
+  },
+  {
+   "texto": "Agrega tus redes sociales: Instagram, TikTok, Facebook, YouTube y muchas más.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Todas tus redes",
+    "items": [
+     {
+      "t": "Instagram",
+      "i": "foto",
+      "palabra": "instagram"
+     },
+     {
+      "t": "TikTok",
+      "i": "play",
+      "palabra": "tiktok"
+     },
+     {
+      "t": "Facebook",
+      "i": "persona",
+      "palabra": "facebook"
+     },
+     {
+      "t": "YouTube",
+      "i": "play",
+      "palabra": "youtube"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elige tu plantilla. Gratis tienes oscuro, claro y rojo, y con tu membresía desbloqueas plantillas por tipo de negocio, tus propios colores y fuentes.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Gratis",
+     "i": "foto",
+     "d": "Plantillas oscuro, claro y rojo",
+     "res": "INCLUIDO",
+     "mal": false
+    },
+    "b": {
+     "t": "Membresía",
+     "i": "estrella",
+     "d": "Plantillas por tipo de negocio, tus colores y fuentes",
+     "res": "PRO",
+     "palabra": "membresía"
+    }
+   }
+  },
+  {
+   "texto": "Y con tu membresía, en «Mi Negocio» conviertes tu portada en una tienda: catálogo con pedidos por WhatsApp, agenda de citas, captura de clientes, reseñas, menú digital con QR y cobros en USDT.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Tu portada en una tienda",
+    "items": [
+     {
+      "t": "Catálogo",
+      "i": "tienda",
+      "palabra": "catálogo"
+     },
+     {
+      "t": "Agenda",
+      "i": "reloj",
+      "palabra": "agenda"
+     },
+     {
+      "t": "Clientes",
+      "i": "persona",
+      "palabra": "captura"
+     },
+     {
+      "t": "Reseñas",
+      "i": "estrella",
+      "palabra": "reseñas"
+     },
+     {
+      "t": "Menú QR",
+      "i": "QR",
+      "palabra": "menú"
+     },
+     {
+      "t": "Cobros USDT",
+      "i": "dinero",
+      "palabra": "cobros"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Por último, compártela: pon tu enlace en la biografía de Instagram y TikTok, envíalo por WhatsApp o imprime tu código QR.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Compártela en todas partes",
+    "items": [
+     {
+      "t": "Bio de Instagram",
+      "i": "foto",
+      "palabra": "biografía"
+     },
+     {
+      "t": "WhatsApp",
+      "i": "chat",
+      "palabra": "whatsapp"
+     },
+     {
+      "t": "Código QR",
+      "i": "QR",
+      "palabra": "código"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tu negocio en un solo enlace. Crea tu portada gratis hoy en sumiago.com.",
+   "voz_texto": "Tu negocio en un solo enlace. Crea tu portada gratis hoy en sumiago punto com.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Tu negocio en un solo enlace",
+    "boton": "sumiago.com",
+    "boton_palabra": "crea"
+   }
+  }
+ ],
+ "cierre_texto": "Crea tu portada gratis",
+ "cierre_boton": "SUMIAGO.COM",
+ "pc": {
+  "titulo": [
+   "TU NEGOCIO",
+   "EN UN SOLO",
+   "ENLACE"
+  ],
+  "puntos": [
+   "Regístrate gratis en sumiago.com",
+   "Perfil, enlaces, WhatsApp y redes",
+   "Plantillas gratis y de membresía",
+   "Compártela en tu bio, WhatsApp o QR"
+  ]
+ }
+}

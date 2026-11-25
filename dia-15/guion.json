@@ -1,0 +1,204 @@
+{
+ "titulo": "Empléate Ya: deja que las empresas te encuentren",
+ "voz": "presentador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "empleo",
+  "empresas",
+  "sumiago",
+  "gratis",
+  "talento",
+  "cinco",
+  "pasos",
+  "documentos",
+  "whatsapp",
+  "correo",
+  "control",
+  "decides",
+  "empresa",
+  "pdf",
+  "intermediarios",
+  "perfil"
+ ],
+ "frases": [
+  {
+   "texto": "¿Buscas empleo? Deja que las empresas te encuentren.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Buscas empleo?",
+     "Deja que te encuentren"
+    ],
+    "rojo": [
+     0
+    ],
+    "icono": "maleta",
+    "tam": 56
+   }
+  },
+  {
+   "texto": "En Sumiago, en la sección «Empléate Ya», publicas tu hoja de vida totalmente gratis y cientos de empresas pueden descubrir tu talento.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Contrátame Sumiago",
+    "filas": [
+     {
+      "t": "¿Buscas empleo?",
+      "palabra": "empléate"
+     },
+     {
+      "t": "Publicar mi hoja de vida",
+      "rojo": true,
+      "palabra": "publicas"
+     },
+     {
+      "t": "GRATIS",
+      "palabra": "gratis"
+     },
+     {
+      "t": "Buscar talento",
+      "palabra": "empresas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Te inscribes en cinco pasos: tus datos, tu perfil, tu experiencia, tu disponibilidad y tus documentos.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "5 pasos",
+    "filas": [
+     {
+      "t": "✓ Datos básicos",
+      "palabra": "datos"
+     },
+     {
+      "t": "✓ Perfil profesional",
+      "palabra": "perfil"
+     },
+     {
+      "t": "✓ Experiencia laboral",
+      "palabra": "experiencia"
+     },
+     {
+      "t": "✓ Disponibilidad",
+      "palabra": "disponibilidad"
+     },
+     {
+      "t": "✓ Documentos",
+      "palabra": "documentos"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Revisamos tu perfil y, si falta algo, te avisamos por WhatsApp o correo para que lo completes.",
+   "escena": {
+    "tipo": "tarjetas",
+    "items": [
+     {
+      "t": "En revisión",
+      "i": "reloj",
+      "palabra": "revisamos"
+     },
+     {
+      "t": "WhatsApp",
+      "i": "chat",
+      "palabra": "whatsapp"
+     },
+     {
+      "t": "Perfil aprobado",
+      "i": "check",
+      "palabra": "completes"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tus datos están bajo tu control: tu teléfono y tu correo solo los ven empresas registradas, y tú decides qué se publica.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Tus datos,",
+     "bajo tu control"
+    ],
+    "icono": "escudo",
+    "sub": "Tú decides qué se publica"
+   }
+  },
+  {
+   "texto": "¿Tienes una empresa? Busca talento por profesión, ciudad, experiencia y nivel académico, guarda tus favoritos y descarga la hoja de vida en PDF.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "¿Tienes una empresa?",
+    "items": [
+     {
+      "t": "Profesión",
+      "i": "maleta",
+      "palabra": "profesión"
+     },
+     {
+      "t": "Ciudad",
+      "i": "ubicacion",
+      "palabra": "ciudad"
+     },
+     {
+      "t": "Experiencia",
+      "i": "estrella",
+      "palabra": "experiencia"
+     },
+     {
+      "t": "Nivel académico",
+      "i": "libro",
+      "palabra": "nivel"
+     },
+     {
+      "t": "Favoritos",
+      "i": "estrella",
+      "palabra": "favoritos"
+     },
+     {
+      "t": "PDF",
+      "i": "PDF",
+      "palabra": "pdf"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Las empresas te contactan directamente a tu WhatsApp o a tu correo, sin intermediarios.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Sin",
+     "intermediarios"
+    ],
+    "icono": "chat"
+   }
+  },
+  {
+   "texto": "Publica hoy mismo tu hoja de vida gratis en Sumiago. El link está en mi perfil.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Publica gratis tu hoja de vida hoy",
+    "boton_palabra": "link"
+   }
+  }
+ ],
+ "cierre_texto": "Empléate Ya en Sumiago",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "DEJA QUE",
+   "LAS EMPRESAS",
+   "TE ENCUENTREN"
+  ],
+  "puntos": [
+   "Hoja de vida gratis en 5 pasos",
+   "Revisión y aviso por WhatsApp",
+   "Tus datos bajo tu control",
+   "Te contactan sin intermediarios"
+  ]
+ }
+}

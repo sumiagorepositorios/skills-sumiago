@@ -1,0 +1,216 @@
+{
+ "titulo": "Trabajas para los sueños de otros",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "tension",
+ "giro": 7,
+ "palabras_clave": [
+  "8",
+  "12",
+  "sueños",
+  "5",
+  "trayecto",
+  "trabajo",
+  "48",
+  "2000",
+  "40",
+  "76.800",
+  "empresa",
+  "casa",
+  "carro",
+  "vacaciones",
+  "justo",
+  "lunes",
+  "descuentan",
+  "reemplazan",
+  "culpa",
+  "sumiago",
+  "negocio",
+  "libres",
+  "escribe"
+ ],
+ "frases": [
+  {
+   "texto": "¿Trabajas todos los días de 8 a 12 horas para los sueños de otros?",
+   "escena": {
+    "tipo": "dato",
+    "valor": "8 a 12",
+    "conteo": false,
+    "etiqueta": "horas todos los días",
+    "sub": "para los sueños de otros"
+   }
+  },
+  {
+   "texto": "Te levantas a las 5, una hora de trayecto, 8 horas de trabajo y otra hora de regreso.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Tu día normal",
+    "filas": [
+     {
+      "t": "5:00 AM · Despertar",
+      "palabra": "levantas"
+     },
+     {
+      "t": "1 hora · Trayecto",
+      "palabra": "trayecto"
+     },
+     {
+      "t": "8 horas · Trabajo",
+      "rojo": true,
+      "palabra": "trabajo"
+     },
+     {
+      "t": "1 hora · Regreso",
+      "palabra": "regreso"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "5 días a la semana, 48 semanas al año: casi 2000 horas.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "2000",
+    "etiqueta": "horas al año",
+    "sub": "5 días × 48 semanas"
+   }
+  },
+  {
+   "texto": "Multiplícalo por 40 años de trabajo: 76.800 horas.",
+   "voz_texto": "Multiplícalo por 40 años de trabajo: setenta y seis mil ochocientas horas.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "76.800",
+    "etiqueta": "horas de tu vida",
+    "sub": "× 40 años"
+   }
+  },
+  {
+   "texto": "¿Y quién se queda con el fruto de esas horas? La empresa de otro.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Quién se queda",
+     "con esas horas?"
+    ],
+    "icono": "maleta",
+    "sub": "La empresa de otro"
+   }
+  },
+  {
+   "texto": "Tú construyes su casa, su carro y sus vacaciones, y a ti te pagan lo justo para que vuelvas el lunes.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Tú construyes…",
+    "items": [
+     {
+      "t": "Su casa",
+      "i": "tienda",
+      "palabra": "casa"
+     },
+     {
+      "t": "Su carro",
+      "i": "carro",
+      "palabra": "carro"
+     },
+     {
+      "t": "Sus vacaciones",
+      "i": "mundo",
+      "palabra": "vacaciones"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si un día faltas, te descuentan. Si un día no estás, te reemplazan.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Si faltas",
+     "i": "alerta",
+     "d": "Te descuentan",
+     "res": "DESCUENTO"
+    },
+    "b": {
+     "t": "Si no estás",
+     "i": "persona",
+     "d": "Te reemplazan",
+     "res": "REEMPLAZO",
+     "palabra": "no",
+     "mal": true
+    }
+   }
+  },
+  {
+   "texto": "No es tu culpa: te enseñaron a trabajar para otros, nunca para ti.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "No es",
+     "tu culpa"
+    ],
+    "icono": "libro",
+    "sub": "te enseñaron a trabajar para otros"
+   }
+  },
+  {
+   "texto": "En Sumiago, cada hora que inviertes construye tu propio negocio, con herramientas y tareas diarias guiadas.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "SUMIAGO",
+    "items": [
+     {
+      "t": "Cada hora es para ti",
+      "i": "reloj",
+      "palabra": "hora"
+     },
+     {
+      "t": "Tu propio negocio",
+      "i": "tienda",
+      "palabra": "negocio"
+     },
+     {
+      "t": "Herramientas + tareas",
+      "i": "check",
+      "palabra": "herramientas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Puedes comenzar en tus horas libres, sin renunciar hoy a tu empleo.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "En tus",
+     "horas libres"
+    ],
+    "icono": "reloj"
+   }
+  },
+  {
+   "texto": "Escribe «Sumiago» y te paso la información para comenzar hoy.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Escribe SUMIAGO y comienza hoy",
+    "boton": "COMENTA SUMIAGO",
+    "boton_palabra": "escribe"
+   }
+  }
+ ],
+ "cierre_texto": "Comienza hoy en tus horas libres",
+ "cierre_boton": "COMENTA «SUMIAGO»",
+ "pc": {
+  "titulo": [
+   "¿TRABAJAS PARA",
+   "LOS SUEÑOS",
+   "DE OTROS?"
+  ],
+  "puntos": [
+   "76.800 horas en 40 años",
+   "Construyes la casa y el carro de otro",
+   "En Sumiago cada hora es para ti",
+   "Empieza en tus horas libres"
+  ]
+ }
+}

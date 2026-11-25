@@ -1,0 +1,138 @@
+{
+ "titulo": "Conversación: Nico quiere entrar a Sumiago",
+ "voz": "esqueleto",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "pausa": 0.25,
+ "personaje_b": "amigo",
+ "palabras_clave": [
+  "sumiago",
+  "aprender",
+  "trabajar",
+  "marketing",
+  "redes",
+  "tareas",
+  "diarias",
+  "portada",
+  "videos",
+  "regalo",
+  "ayudamos",
+  "empezar",
+  "link",
+  "perfil"
+ ],
+ "frases": [
+  {
+   "texto": "¡Sumiago! Me contaron que en tu comunidad se gana muchísimo. ¡Yo quiero entrar ya!",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Jaja, tranquilo. Primero dime algo: ¿tienes ganas de aprender y de trabajar en serio?",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "¡Claro que sí! Estoy dispuesto a trabajar.",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Eso es lo más importante. Aquí entras a Gana con Marketing, con cursos de marketing e inteligencia artificial.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "¿Y si no sé nada de redes sociales?",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Por eso existen las tareas diarias. Cada día te decimos qué hacer, paso a paso.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "Pero yo no conozco a nadie.",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Tranquilo. Con tu portada y tus videos, las personas interesadas te escriben a ti.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "Y cuando alguien se registra directo en Sumiago, el sistema se lo asigna a quien menos referidos tenga.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "¿Referidos de regalo? ¡Eso no lo hace nadie!",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Y lo mejor: aquí nos ayudamos entre todos. Cuando a tu equipo le va bien, a ti también.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "¡Ya quiero empezar! ¿Qué tengo que hacer?",
+   "voz": "leeknow",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Ve al link de mi perfil y te acompaño desde el primer paso. Esto es Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Te acompaño desde el primer paso",
+    "boton_palabra": "link"
+   }
+  }
+ ],
+ "cierre_texto": "Aprendemos y crecemos juntos",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "¿QUIERES ENTRAR",
+   "A SUMIAGO?"
+  ],
+  "puntos": [
+   "Ganas de aprender y trabajar",
+   "Gana con Marketing e IA",
+   "Tareas diarias paso a paso",
+   "Referidos de regalo y trabajo en equipo"
+  ]
+ }
+}

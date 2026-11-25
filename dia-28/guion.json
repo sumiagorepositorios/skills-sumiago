@@ -1,0 +1,167 @@
+{
+ "titulo": "5 instrucciones para que tus videos con Claude no parezcan PowerPoint",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "claude",
+  "powerpoint",
+  "cinco",
+  "instrucciones",
+  "máscara",
+  "encadena",
+  "dominó",
+  "cámara",
+  "zoom",
+  "transforma",
+  "objeto",
+  "sincroniza",
+  "voz",
+  "carro",
+  "crear",
+  "tareas",
+  "diarias",
+  "comenta",
+  "sumiago",
+  "juntos"
+ ],
+ "frases": [
+  {
+   "texto": "¿Tus videos hechos con Claude parecen una presentación de PowerPoint? Guarda estas cinco instrucciones.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Tus videos con Claude",
+     "parecen PowerPoint?"
+    ],
+    "tam": 52,
+    "icono": "play",
+    "sub": "Guarda estas 5 instrucciones"
+   }
+  },
+  {
+   "texto": "Uno: revela el texto desde una máscara. Así las palabras salen detrás de un borde, en lugar de solo encenderse.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "Aa",
+    "titulo": "Revela desde una máscara",
+    "detalle": "Las palabras salen detrás de un borde en lugar de solo encenderse."
+   }
+  },
+  {
+   "texto": "Dos: encadena tus movimientos. Cada elemento entra y empuja al siguiente, como fichas de dominó.",
+   "escena": {
+    "tipo": "lista",
+    "n": "2",
+    "icono": "check",
+    "titulo": "Movimientos encadenados",
+    "detalle": "Cada elemento entra y empuja al siguiente, como fichas de dominó."
+   }
+  },
+  {
+   "texto": "Tres: haz que la cámara siga algo importante. Un zoom que acompaña la acción mantiene la atención.",
+   "escena": {
+    "tipo": "lista",
+    "n": "3",
+    "icono": "foto",
+    "titulo": "Una cámara que sigue",
+    "detalle": "Un zoom que acompaña la acción mantiene la atención."
+   }
+  },
+  {
+   "texto": "Cuatro: transforma un objeto para presentar la siguiente escena. Esta tarjeta se convierte en la pantalla que sigue.",
+   "escena": {
+    "tipo": "lista",
+    "n": "4",
+    "icono": "telefono",
+    "titulo": "Un objeto que se transforma",
+    "detalle": "Esta tarjeta se convierte en la pantalla que sigue."
+   }
+  },
+  {
+   "texto": "Cinco: sincroniza las animaciones con tu voz. Si dices «carro», aparece un carro; si dices «crear», se presiona el botón.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "5 · Sincronía con tu voz",
+    "items": [
+     {
+      "t": "Carro",
+      "i": "carro",
+      "palabra": "carro"
+     },
+     {
+      "t": "Crear",
+      "i": "check",
+      "palabra": "crear"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Practica estas instrucciones en tus tareas diarias y tus videos se verán profesionales.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Practícalas en tareas diarias",
+    "items": [
+     {
+      "t": "Máscara",
+      "i": "1"
+     },
+     {
+      "t": "Encadena",
+      "i": "2"
+     },
+     {
+      "t": "Cámara",
+      "i": "3"
+     },
+     {
+      "t": "Transforma",
+      "i": "4"
+     },
+     {
+      "t": "Sincroniza",
+      "i": "5"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Comenta «Sumiago» y ve al link de mi perfil para regalarte el enlace, y comiences a aprender y ganar hoy.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Comenta SUMIAGO",
+    "boton": "LINK EN MI PERFIL",
+    "boton_palabra": "link"
+   }
+  },
+  {
+   "texto": "Sumiago: aprendemos, nos ayudamos y crecemos juntos.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Aprendemos, nos ayudamos",
+     "y crecemos juntos"
+    ],
+    "tam": 46,
+    "icono": "logo"
+   }
+  }
+ ],
+ "cierre_texto": "Aprendemos, nos ayudamos y crecemos juntos",
+ "cierre_boton": "SUMIAGO.COM",
+ "pc": {
+  "titulo": [
+   "5 INSTRUCCIONES",
+   "PARA TUS VIDEOS",
+   "CON CLAUDE"
+  ],
+  "puntos": [
+   "Revela el texto desde una máscara",
+   "Encadena tus movimientos",
+   "Cámara que sigue y objetos que se transforman",
+   "Sincroniza las animaciones con tu voz"
+  ]
+ }
+}

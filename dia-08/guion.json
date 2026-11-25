@@ -1,0 +1,194 @@
+{
+ "titulo": "6 tips para comprar seguro en el Marketplace",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "estafar",
+  "seis",
+  "seguro",
+  "marketplace",
+  "reputación",
+  "estrellas",
+  "verificado",
+  "ubicación",
+  "ciudad",
+  "whatsapp",
+  "fotos",
+  "video",
+  "persona",
+  "público",
+  "día",
+  "pagar",
+  "anticipos",
+  "bajos",
+  "prisas",
+  "repórtalo",
+  "engaño",
+  "regístrate",
+  "sumiago"
+ ],
+ "frases": [
+  {
+   "texto": "¡Alto! Antes de comprar por internet, mira esto o te pueden estafar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¡NO TE DEJES",
+     "ESTAFAR!"
+    ],
+    "icono": "alerta"
+   }
+  },
+  {
+   "texto": "Te voy a dar seis tips para comprar seguro en el marketplace de Sumiago.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "6 tips",
+    "items": [
+     {
+      "t": "Reputación",
+      "i": "estrella"
+     },
+     {
+      "t": "Ubicación",
+      "i": "ubicacion"
+     },
+     {
+      "t": "Preguntas",
+      "i": "chat"
+     },
+     {
+      "t": "En persona",
+      "i": "persona"
+     },
+     {
+      "t": "Revisa",
+      "i": "check"
+     },
+     {
+      "t": "Muy barato",
+      "i": "alerta"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Uno: revisa la reputación del vendedor.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "estrella",
+    "titulo": "Reputación",
+    "detalle": "Revisa el perfil del vendedor antes de escribirle."
+   }
+  },
+  {
+   "texto": "Mira sus estrellas, cuántos artículos ha vendido y si tiene el correo verificado.",
+   "escena": {
+    "tipo": "tarjetas",
+    "items": [
+     {
+      "t": "4.8 estrellas",
+      "i": "estrella",
+      "palabra": "estrellas"
+     },
+     {
+      "t": "15 vendidos",
+      "i": "tienda",
+      "palabra": "vendido"
+     },
+     {
+      "t": "Correo verificado",
+      "i": "correo",
+      "palabra": "correo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dos: mira la ubicación, que el vendedor esté en tu misma ciudad, cerca de tu zona.",
+   "escena": {
+    "tipo": "lista",
+    "n": "2",
+    "icono": "ubicacion",
+    "titulo": "Ubicación",
+    "detalle": "Que el vendedor esté en tu misma ciudad, cerca de tu zona."
+   }
+  },
+  {
+   "texto": "Tres: escríbele por WhatsApp y hazle varias preguntas del artículo. Pídele más fotos y un video reciente.",
+   "escena": {
+    "tipo": "lista",
+    "n": "3",
+    "icono": "chat",
+    "titulo": "Pregunta por WhatsApp",
+    "detalle": "Haz varias preguntas del artículo y pide más fotos y un video reciente."
+   }
+  },
+  {
+   "texto": "Cuatro: dile que estás en su misma ciudad y acuerden verse en persona, en un lugar público y de día.",
+   "escena": {
+    "tipo": "lista",
+    "n": "4",
+    "icono": "persona",
+    "titulo": "Verse en persona",
+    "detalle": "En un lugar público y de día."
+   }
+  },
+  {
+   "texto": "Cinco: revisa el producto antes de pagar. Pruébalo bien y nunca envíes anticipos a desconocidos.",
+   "escena": {
+    "tipo": "lista",
+    "n": "5",
+    "icono": "check",
+    "titulo": "Revisa antes de pagar",
+    "detalle": "Enciende, prueba y compara con las fotos. Nunca envíes anticipos a desconocidos."
+   }
+  },
+  {
+   "texto": "Seis: desconfía de los precios demasiado bajos y de las prisas. Si algo te parece raro, repórtalo en Sumiago.",
+   "escena": {
+    "tipo": "lista",
+    "n": "6",
+    "icono": "alerta",
+    "titulo": "Ojo con lo muy barato",
+    "detalle": "Precios demasiado bajos y prisas son señal de alerta. Repórtalo en Sumiago."
+   }
+  },
+  {
+   "texto": "Con estos seis tips compras tranquilo y sin engaño.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¡AHORA COMPRAS",
+     "SIN ENGAÑOS!"
+    ],
+    "icono": "escudo"
+   }
+  },
+  {
+   "texto": "No te pierdas esta gran oportunidad: entra y regístrate en Sumiago si no lo has hecho.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Compra seguro en Sumiago",
+    "boton": "REGÍSTRATE EN SUMIAGO",
+    "boton_palabra": "regístrate"
+   }
+  }
+ ],
+ "cierre_texto": "Compra seguro en Sumiago",
+ "cierre_boton": "REGÍSTRATE · LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "6 TIPS PARA",
+   "COMPRAR SEGURO"
+  ],
+  "puntos": [
+   "Revisa la reputación y la ubicación",
+   "Pregunta por WhatsApp y pide video",
+   "Véanse en persona, en público y de día",
+   "Nada de anticipos ni precios muy bajos"
+  ]
+ }
+}

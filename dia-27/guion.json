@@ -1,0 +1,241 @@
+{
+ "titulo": "Negocio simple: grabado láser personalizado (3 pasos)",
+ "voz": "presentador",
+ "tema": "claro",
+ "musica": "alegre",
+ "pausa": 0.25,
+ "palabras_clave": [
+  "sencillos",
+  "plata",
+  "guarda",
+  "paso",
+  "grabadora",
+  "láser",
+  "300",
+  "800",
+  "fábrica",
+  "blanco",
+  "termos",
+  "billeteras",
+  "inteligencia",
+  "artificial",
+  "encargo",
+  "triple",
+  "tiktok",
+  "marketplace",
+  "sumiago",
+  "producto",
+  "comisiones"
+ ],
+ "frases": [
+  {
+   "texto": "Hay negocios que parecen sencillos, pero dejan muy buena plata. Guarda este video y pon atención.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "NEGOCIOS SIMPLES",
+     "QUE DEJAN PLATA"
+    ],
+    "icono": "dinero",
+    "sub": "Guarda este video"
+   }
+  },
+  {
+   "texto": "Paso 1: consigue una grabadora láser. No la más cara: una china de 300 a 800 dólares funciona perfecto.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "foto",
+    "titulo": "Grabadora láser",
+    "detalle": "No la más cara: una de 300 a 800 dólares funciona perfecto."
+   }
+  },
+  {
+   "texto": "La conectas a tu computador y tu cuarto se convierte en una pequeña fábrica.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Tu cuarto,",
+     "una pequeña fábrica"
+    ],
+    "icono": "tienda",
+    "tam": 56
+   }
+  },
+  {
+   "texto": "Paso 2: compra productos en blanco. Termos, billeteras, bolígrafos y llaveros de 2 a 5 dólares, y te llegan a la casa.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Productos en blanco",
+    "items": [
+     {
+      "t": "Termo $2",
+      "i": "regalo",
+      "palabra": "termos"
+     },
+     {
+      "t": "Billetera $5",
+      "i": "dinero",
+      "palabra": "billeteras"
+     },
+     {
+      "t": "Bolígrafo $1",
+      "i": "libro",
+      "palabra": "bolígrafos"
+     },
+     {
+      "t": "Llavero $2",
+      "i": "enlace",
+      "palabra": "llaveros"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Con inteligencia artificial creas frases y nombres antes de que te los pidan: uno para el Día del Padre, otro para San Valentín.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Diseños con IA",
+    "items": [
+     {
+      "t": "Papá, mi héroe",
+      "i": "ia",
+      "palabra": "padre"
+     },
+     {
+      "t": "Te amo",
+      "i": "regalo",
+      "palabra": "valentín"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Con esos diseños tomas tus fotos de muestra y grabas solo por encargo: un nombre, una inicial, una fecha.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Fotos de muestra",
+     "solo por encargo"
+    ],
+    "icono": "foto",
+    "rojo": [
+     1
+    ],
+    "tam": 56
+   }
+  },
+  {
+   "texto": "El cliente te escribe el nombre, tú lo grabas, lo empacas y la transportadora se lo lleva hasta su casa.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Así funciona",
+    "filas": [
+     {
+      "t": "Te escribe el nombre",
+      "palabra": "escribe"
+     },
+     {
+      "t": "Tú lo grabas",
+      "palabra": "grabas"
+     },
+     {
+      "t": "Lo empacas",
+      "palabra": "empacas"
+     },
+     {
+      "t": "Llega a su casa",
+      "rojo": true,
+      "palabra": "transportadora"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Paso 3: lo vendes al triple. El termo de 2 en 6, la billetera de 5 en 15, el bolígrafo de 1 en 3.",
+   "escena": {
+    "tipo": "linea",
+    "titulo": "Vende al triple",
+    "items": [
+     {
+      "t": "Termo",
+      "v": 6,
+      "etq": "$2 → $6",
+      "palabra": "termo"
+     },
+     {
+      "t": "Billetera",
+      "v": 15,
+      "etq": "$5 → $15",
+      "palabra": "billetera"
+     },
+     {
+      "t": "Bolígrafo",
+      "v": 3,
+      "etq": "$1 → $3",
+      "palabra": "bolígrafo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Lo publicas en TikTok y en el marketplace de Sumiago, para bodas, grados y fechas especiales.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Marketplace Sumiago",
+    "filas": [
+     {
+      "t": "Termo personalizado · $6",
+      "rojo": true,
+      "palabra": "publicas"
+     },
+     {
+      "t": "Bodas",
+      "palabra": "bodas"
+     },
+     {
+      "t": "Grados",
+      "palabra": "grados"
+     },
+     {
+      "t": "Fechas especiales",
+      "palabra": "fechas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Empieza con un solo producto.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "1",
+    "conteo": false,
+    "etiqueta": "solo producto para empezar"
+   }
+  },
+  {
+   "texto": "Y si quieres hacer videos como este, regístrate en Sumiago y gana comisiones por recomendar la oportunidad.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "¿Quieres hacer videos así?",
+    "boton": "REGÍSTRATE EN SUMIAGO",
+    "boton_palabra": "regístrate"
+   }
+  }
+ ],
+ "cierre_texto": "Aprende a crear videos así",
+ "cierre_boton": "SUMIAGO.COM",
+ "pc": {
+  "titulo": [
+   "NEGOCIOS",
+   "SIMPLES QUE",
+   "DEJAN PLATA"
+  ],
+  "puntos": [
+   "Paso 1: grabadora láser",
+   "Paso 2: productos en blanco y diseños con IA",
+   "Paso 3: véndelo al triple",
+   "Publícalo en TikTok y en el Marketplace"
+  ]
+ }
+}

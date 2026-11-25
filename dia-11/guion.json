@@ -1,0 +1,146 @@
+{
+ "titulo": "5 herramientas, 1 membresía",
+ "voz": "presentador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "cinco",
+  "herramientas",
+  "membresía",
+  "experiencia",
+  "aprender",
+  "portada",
+  "enlace",
+  "marketplace",
+  "tienda",
+  "tareas",
+  "cursos",
+  "sueldo",
+  "mensual",
+  "registrarte"
+ ],
+ "frases": [
+  {
+   "texto": "Cinco herramientas de Sumiago para ganar desde tu celular, y una sola membresía.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "5",
+    "conteo": false,
+    "etiqueta": "herramientas",
+    "sub": "1 membresía"
+   }
+  },
+  {
+   "texto": "No necesitas experiencia, solo ganas de aprender.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "SIN",
+     "EXPERIENCIA"
+    ],
+    "icono": "libro"
+   }
+  },
+  {
+   "texto": "Herramienta uno: tu portada de negocios, un enlace propio con tu nombre, listo para compartir.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "enlace",
+    "titulo": "Tu portada",
+    "detalle": "sumiago.com/tu-nombre: un enlace propio listo para compartir."
+   }
+  },
+  {
+   "texto": "Herramienta dos: el marketplace. Publica y vende en tu país, mejor que en Facebook.",
+   "escena": {
+    "tipo": "lista",
+    "n": "2",
+    "icono": "tienda",
+    "titulo": "Marketplace",
+    "detalle": "Publica y vende en tu país."
+   }
+  },
+  {
+   "texto": "Herramienta tres: tu propia tienda, con tu logo y tu enlace para WhatsApp.",
+   "escena": {
+    "tipo": "lista",
+    "n": "3",
+    "icono": "telefono",
+    "titulo": "Tu propia tienda",
+    "detalle": "Con tu logo y tu enlace para compartir por WhatsApp."
+   }
+  },
+  {
+   "texto": "Herramienta cuatro: tareas diarias. Cada día, un paso nuevo explicado en video.",
+   "escena": {
+    "tipo": "lista",
+    "n": "4",
+    "icono": "check",
+    "titulo": "Tareas diarias",
+    "detalle": "Cada día, un paso nuevo explicado en video."
+   }
+  },
+  {
+   "texto": "Y la cinco, la mejor: los cursos Gana con Marketing, con rangos y premio de sueldo mensual.",
+   "escena": {
+    "tipo": "lista",
+    "n": "5",
+    "icono": "libro",
+    "titulo": "Gana con Marketing",
+    "detalle": "Cursos, rangos y premio de Sueldo Mensual."
+   }
+  },
+  {
+   "texto": "Cinco herramientas, una sola membresía.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Una sola membresía",
+    "items": [
+     {
+      "t": "Portada",
+      "i": "enlace"
+     },
+     {
+      "t": "Marketplace",
+      "i": "tienda"
+     },
+     {
+      "t": "Tienda",
+      "i": "telefono"
+     },
+     {
+      "t": "Tareas",
+      "i": "check"
+     },
+     {
+      "t": "Cursos",
+      "i": "libro"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Si quieres aprender y ganar un sueldo mensual, visita el enlace de mi perfil para registrarte en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Regístrate en Sumiago",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "5 herramientas, 1 membresía",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "5 HERRAMIENTAS,",
+   "1 MEMBRESÍA"
+  ],
+  "puntos": [
+   "Portada de negocios y Marketplace",
+   "Tu propia tienda",
+   "Tareas diarias en video",
+   "Cursos Gana con Marketing"
+  ]
+ }
+}

@@ -1,0 +1,240 @@
+{
+ "titulo": "Publica tu hoja de vida en Contrátame Sumiago (5 pasos)",
+ "voz": "presentador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "empleo",
+  "gratis",
+  "cinco",
+  "pasos",
+  "básicos",
+  "perfil",
+  "profesional",
+  "disponibilidad",
+  "foto",
+  "pdf",
+  "autorizas",
+  "whatsapp",
+  "enlace",
+  "redes",
+  "sumiago"
+ ],
+ "frases": [
+  {
+   "texto": "¿Buscas empleo? Publica tu hoja de vida gratis en Contrátame Sumiago, en cinco pasos.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿BUSCAS",
+     "EMPLEO?"
+    ],
+    "icono": "maleta",
+    "sub": "Hoja de vida gratis · 5 pasos"
+   }
+  },
+  {
+   "texto": "Paso uno: tus datos básicos. Nombre, país, ciudad, correo y WhatsApp.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Datos básicos · 01",
+    "filas": [
+     {
+      "t": "Nombre",
+      "palabra": "nombre"
+     },
+     {
+      "t": "País",
+      "palabra": "país"
+     },
+     {
+      "t": "Ciudad",
+      "palabra": "ciudad"
+     },
+     {
+      "t": "Correo",
+      "palabra": "correo"
+     },
+     {
+      "t": "WhatsApp",
+      "palabra": "whatsapp"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Paso dos: tu perfil profesional. Profesión, cargo al que aspiras, experiencia y habilidades.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Perfil profesional · 02",
+    "filas": [
+     {
+      "t": "Profesión",
+      "palabra": "profesión"
+     },
+     {
+      "t": "Cargo",
+      "palabra": "cargo"
+     },
+     {
+      "t": "Experiencia",
+      "palabra": "experiencia"
+     },
+     {
+      "t": "Habilidades",
+      "palabra": "habilidades"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Paso tres: tu disponibilidad. Modalidad, jornada y tipo de contrato.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Disponibilidad · 03",
+    "filas": [
+     {
+      "t": "Modalidad",
+      "palabra": "modalidad"
+     },
+     {
+      "t": "Jornada",
+      "palabra": "jornada"
+     },
+     {
+      "t": "Tipo de contrato",
+      "palabra": "tipo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Paso cuatro: sube tu foto profesional y tu hoja de vida en PDF.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Documentos · 04",
+    "items": [
+     {
+      "t": "Foto profesional",
+      "i": "foto",
+      "palabra": "foto"
+     },
+     {
+      "t": "Hoja de vida PDF",
+      "i": "PDF",
+      "palabra": "pdf"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y paso cinco: tú autorizas qué se publica. Tu teléfono y tu correo solo los ven empresas registradas.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Autorizaciones · 05",
+    "filas": [
+     {
+      "t": "Publicar mi perfil ✓",
+      "palabra": "autorizas"
+     },
+     {
+      "t": "Mostrar mi foto ✓",
+      "palabra": "publica"
+     },
+     {
+      "t": "Teléfono y correo: privados",
+      "rojo": true,
+      "palabra": "teléfono"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Revisamos tu perfil, lo publicamos y las empresas te escriben directo a tu WhatsApp.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Las empresas te contactan",
+    "items": [
+     {
+      "t": "Revisamos",
+      "i": "check",
+      "palabra": "revisamos"
+     },
+     {
+      "t": "Publicamos",
+      "i": "persona",
+      "palabra": "publicamos"
+     },
+     {
+      "t": "WhatsApp",
+      "i": "chat",
+      "palabra": "whatsapp"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Además, puedes compartir el enlace de tu hoja de vida con cualquier empresa por tus redes sociales, para que la visiten y te contraten.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Comparte tu hoja de vida",
+    "items": [
+     {
+      "t": "WhatsApp",
+      "i": "chat",
+      "palabra": "enlace"
+     },
+     {
+      "t": "Facebook",
+      "i": "persona",
+      "palabra": "empresa"
+     },
+     {
+      "t": "Instagram",
+      "i": "foto",
+      "palabra": "redes"
+     },
+     {
+      "t": "LinkedIn",
+      "i": "maleta",
+      "palabra": "visiten"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Todo organizado en un solo lugar: Sumiago.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Todo en",
+     "un solo lugar"
+    ],
+    "icono": "logo"
+   }
+  },
+  {
+   "texto": "Publica tu hoja de vida gratis. Visita el enlace de mi perfil y regístrate en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Publica gratis tu hoja de vida",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Publica gratis tu hoja de vida",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "PUBLICA TU",
+   "HOJA DE VIDA",
+   "GRATIS"
+  ],
+  "puntos": [
+   "Datos básicos y perfil profesional",
+   "Disponibilidad, foto y PDF",
+   "Tú autorizas qué se publica",
+   "Las empresas te escriben al WhatsApp"
+  ]
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "titulo": "Convierte tu teléfono en una herramienta para ganar (4 pasos)",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "monetizar",
+  "teléfono",
+  "pasos",
+  "uno",
+  "regístrate",
+  "dos",
+  "portada",
+  "tres",
+  "marketplace",
+  "cuatro",
+  "hoja",
+  "vida",
+  "empleos",
+  "comisiones",
+  "directas",
+  "constancia",
+  "disciplina",
+  "sueldo",
+  "hoy",
+  "click",
+  "perfil"
+ ],
+ "frases": [
+  {
+   "texto": "¡Para, para, para! ¿Andas scrolleando video tras video y sin monetizar nada?",
+   "escena": {
+    "tipo": "dato",
+    "valor": "$0",
+    "conteo": false,
+    "etiqueta": "Ganado hoy",
+    "sub": "video tras video, sin monetizar"
+   }
+  },
+  {
+   "texto": "Quédate, que aquí te enseño a convertir tu teléfono en una máquina de generar dinero.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Ganancias",
+    "filas": [
+     {
+      "t": "Tu portada",
+      "palabra": "convertir"
+     },
+     {
+      "t": "Marketplace",
+      "palabra": "teléfono"
+     },
+     {
+      "t": "Comisiones",
+      "rojo": true,
+      "palabra": "máquina"
+     }
+    ],
+    "aviso": "Ejemplo ilustrativo: los resultados dependen de tu trabajo y no están garantizados."
+   }
+  },
+  {
+   "texto": "Solo en unos simples pasos.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Solo en 4 pasos",
+    "items": [
+     {
+      "t": "Regístrate",
+      "i": "persona"
+     },
+     {
+      "t": "Portada",
+      "i": "enlace"
+     },
+     {
+      "t": "Marketplace",
+      "i": "tienda"
+     },
+     {
+      "t": "Empleos",
+      "i": "maleta"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Uno: dale clic al enlace de mi perfil y regístrate rápido en Sumiago.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "persona",
+    "titulo": "Regístrate en Sumiago",
+    "detalle": "Dale clic al enlace de mi perfil. ¡Registro listo!"
+   }
+  },
+  {
+   "texto": "Dos: crea tu portada de negocio, con tu WhatsApp, tus redes y tus productos.",
+   "escena": {
+    "tipo": "lista",
+    "n": "2",
+    "icono": "enlace",
+    "titulo": "Tu portada de negocio",
+    "detalle": "Con tu WhatsApp, tus redes y tus productos."
+   }
+  },
+  {
+   "texto": "Tres: sube los artículos usados que quieras vender en el marketplace.",
+   "escena": {
+    "tipo": "lista",
+    "n": "3",
+    "icono": "tienda",
+    "titulo": "Vende en el Marketplace",
+    "detalle": "Bicicleta, celular, guitarra, tenis… lo que quieras vender."
+   }
+  },
+  {
+   "texto": "Cuatro: si eres estudiante o profesional, llena tu hoja de vida en Empleos para que las empresas te contraten.",
+   "escena": {
+    "tipo": "lista",
+    "n": "4",
+    "icono": "maleta",
+    "titulo": "Tu hoja de vida en Empleos",
+    "detalle": "Para que las empresas te encuentren y te contraten."
+   }
+  },
+  {
+   "texto": "Y usa todas las herramientas para monetizar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Usa todas las",
+     "herramientas"
+    ],
+    "icono": "check"
+   }
+  },
+  {
+   "texto": "Ahora, si recomiendas la oportunidad a tu familia, amigos y conocidos, ganas comisiones directas, continuas y exponenciales.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Comisiones directas",
+    "items": [
+     {
+      "t": "Familia",
+      "i": "persona",
+      "palabra": "familia"
+     },
+     {
+      "t": "Amigos",
+      "i": "persona",
+      "palabra": "amigos"
+     },
+     {
+      "t": "Conocidos",
+      "i": "persona",
+      "palabra": "conocidos"
+     },
+     {
+      "t": "Comisiones",
+      "i": "grafica",
+      "palabra": "comisiones"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y con constancia y disciplina puedes lograr un sueldo en Sumiago a mediano plazo.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Mi constancia",
+    "items": [
+     {
+      "t": "Constancia",
+      "i": "check",
+      "palabra": "constancia"
+     },
+     {
+      "t": "Disciplina",
+      "i": "check",
+      "palabra": "disciplina"
+     },
+     {
+      "t": "Sueldo mensual",
+      "i": "dinero",
+      "palabra": "sueldo"
+     }
+    ],
+    "aviso": "Ejemplo ilustrativo: los resultados dependen de tu trabajo y no están garantizados."
+   }
+  },
+  {
+   "texto": "¿Qué esperas? Comienza hoy en Sumiago. Dale clic al enlace de mi perfil.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Comienza hoy en Sumiago",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "¿Qué esperas? Comienza hoy",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "TU TELÉFONO",
+   "PARA GANAR",
+   "EN 4 PASOS"
+  ],
+  "puntos": [
+   "Regístrate en Sumiago",
+   "Crea tu portada de negocio",
+   "Vende en el Marketplace",
+   "Tu hoja de vida en Empleos"
+  ]
+ }
+}

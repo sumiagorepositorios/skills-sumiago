@@ -1,0 +1,250 @@
+{
+ "titulo": "Dos barberos en la misma calle: Carlos y Andrés",
+ "voz": "narrador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "misma",
+  "calle",
+  "lleno",
+  "carlos",
+  "silla",
+  "vacía",
+  "andrés",
+  "marketplace",
+  "sumiago",
+  "boda",
+  "cita",
+  "portada",
+  "whatsapp",
+  "redes",
+  "videos",
+  "reservar",
+  "click",
+  "amigos",
+  "encuentra",
+  "anuncio",
+  "enlace",
+  "vuelven",
+  "gratis"
+ ],
+ "frases": [
+  {
+   "texto": "Dos barberos en la misma calle. Mismo corte, mismo precio, pero uno vive lleno y el otro esperando.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Carlos",
+     "i": "tijera",
+     "d": "Esperando clientes",
+     "res": "VACÍO"
+    },
+    "b": {
+     "t": "Andrés",
+     "i": "tijera",
+     "d": "Vive lleno",
+     "res": "LLENO",
+     "palabra": "lleno"
+    }
+   }
+  },
+  {
+   "texto": "Carlos corta bien, pero su silla pasa casi todo el día vacía.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "CARLOS",
+     "corta bien… pero nadie llega"
+    ],
+    "rojo": [],
+    "icono": "reloj",
+    "tam": 52
+   }
+  },
+  {
+   "texto": "Andrés, en cambio, publicó su servicio en el marketplace de Sumiago:",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Marketplace",
+    "filas": [
+     {
+      "t": "Cortes para caballero",
+      "palabra": "servicio"
+     },
+     {
+      "t": "Barbería · Tu ciudad",
+      "palabra": "marketplace"
+     }
+    ],
+    "boton": "CONTACTAR",
+    "boton_palabra": "sumiago"
+   }
+  },
+  {
+   "texto": "«Cortes para caballeros que quieren verse espectaculares en su boda, sus 15 años, su cumpleaños o cualquier evento».",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Su anuncio",
+    "items": [
+     {
+      "t": "Boda",
+      "i": "regalo",
+      "palabra": "boda"
+     },
+     {
+      "t": "15 años",
+      "i": "estrella",
+      "palabra": "15"
+     },
+     {
+      "t": "Cumpleaños",
+      "i": "regalo",
+      "palabra": "cumpleaños"
+     },
+     {
+      "t": "Eventos",
+      "i": "check",
+      "palabra": "evento"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Un joven ve el anuncio, le escribe y reserva su cita.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B",
+    "burbuja": "¿Tienes cita el sábado?"
+   }
+  },
+  {
+   "texto": "Andrés le hace el corte y le dice: «Estás listo».",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A",
+    "burbuja": "¡Estás listo!"
+   }
+  },
+  {
+   "texto": "Y antes de que se vaya, le regala el enlace de su portada de negocio en Sumiago.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "El regalo:",
+     "su portada"
+    ],
+    "icono": "enlace",
+    "sub": "sumiago.com/andres"
+   }
+  },
+  {
+   "texto": "Ahí están su WhatsApp, sus redes sociales, los videos de sus cortes y un botón para reservar citas personalizadas.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Andrés Barber",
+    "filas": [
+     {
+      "t": "WhatsApp",
+      "palabra": "whatsapp"
+     },
+     {
+      "t": "Instagram · TikTok",
+      "palabra": "redes"
+     },
+     {
+      "t": "Videos de cortes",
+      "palabra": "videos"
+     },
+     {
+      "t": "RESERVAR CITA",
+      "rojo": true,
+      "palabra": "reservar"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Para su próximo evento, el cliente reserva en un clic y comparte la portada con su hermano y sus amigos.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Y la comparte",
+    "items": [
+     {
+      "t": "Reserva en un clic",
+      "i": "reloj",
+      "palabra": "reserva"
+     },
+     {
+      "t": "Su hermano",
+      "i": "persona",
+      "palabra": "hermano"
+     },
+     {
+      "t": "Sus amigos",
+      "i": "persona",
+      "palabra": "amigos"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Carlos también corta bien, pero nadie lo encuentra, y sus clientes no saben cómo volver.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "CARLOS…",
+     "nadie lo encuentra"
+    ],
+    "rojo": [],
+    "icono": "alerta",
+    "tam": 56
+   }
+  },
+  {
+   "texto": "Un anuncio, un enlace: clientes que llegan, vuelven y traen más.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "La diferencia",
+    "items": [
+     {
+      "t": "Un anuncio",
+      "i": "tienda",
+      "palabra": "anuncio"
+     },
+     {
+      "t": "Un enlace",
+      "i": "enlace",
+      "palabra": "enlace"
+     },
+     {
+      "t": "Vuelven y traen más",
+      "i": "persona",
+      "palabra": "vuelven"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Publica gratis tu servicio en Sumiago y crea tu portada de negocio. Entra al enlace de mi perfil.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Publica gratis tu servicio y crea tu portada",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Marketplace · WhatsApp · redes · reservas",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "DOS BARBEROS,",
+   "LA MISMA CALLE"
+  ],
+  "puntos": [
+   "Andrés publica su servicio en el Marketplace",
+   "Regala el enlace de su portada",
+   "Reservas, redes y videos en un enlace",
+   "Clientes que vuelven y traen más"
+  ]
+ }
+}

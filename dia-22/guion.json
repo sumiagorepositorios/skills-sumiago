@@ -1,0 +1,184 @@
+{
+ "titulo": "20 años estudiando (versión con enlace del perfil)",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "tension",
+ "giro": 6,
+ "palabras_clave": [
+  "veinte",
+  "20",
+  "sueldo",
+  "conciencia",
+  "estudiar",
+  "años",
+  "16",
+  "19",
+  "empleo",
+  "lineales",
+  "irónico",
+  "sumiago",
+  "negocio",
+  "herramientas",
+  "tareas",
+  "diarias",
+  "sueldos",
+  "comentarios",
+  "enlace",
+  "perfil",
+  "click"
+ ],
+ "frases": [
+  {
+   "texto": "¿Sabías que pasas casi 20 años de tu vida estudiando para ganar un sueldo que no te alcanza?",
+   "escena": {
+    "tipo": "dato",
+    "valor": "19",
+    "etiqueta": "años estudiando",
+    "sub": "para un sueldo que no te alcanza"
+   }
+  },
+  {
+   "texto": "Naces, y apenas tienes uso de conciencia, tus padres te ponen a estudiar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "NACES…",
+     "¡Y A ESTUDIAR!"
+    ],
+    "icono": "libro"
+   }
+  },
+  {
+   "texto": "Preescolar, hasta tres años. Primaria, cinco años. Bachillerato, seis años más. Y la universidad, cuatro o cinco años.",
+   "escena": {
+    "tipo": "linea",
+    "titulo": "Tu vida estudiando",
+    "items": [
+     {
+      "t": "Preescolar",
+      "v": 3,
+      "etq": "3 años",
+      "palabra": "preescolar"
+     },
+     {
+      "t": "Primaria",
+      "v": 5,
+      "etq": "5 años",
+      "palabra": "primaria"
+     },
+     {
+      "t": "Bachillerato",
+      "v": 6,
+      "etq": "6 años",
+      "palabra": "bachillerato"
+     },
+     {
+      "t": "Universidad",
+      "v": 5,
+      "etq": "4–5 años",
+      "palabra": "universidad"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "En total, de 16 a 19 años de tu vida.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "16–19",
+    "conteo": false,
+    "etiqueta": "años de tu vida"
+   }
+  },
+  {
+   "texto": "¿Y todo para qué? Para conseguir un empleo y dedicarle muchos años más.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Y todo para qué?",
+     "UN EMPLEO"
+    ],
+    "icono": "maleta"
+   }
+  },
+  {
+   "texto": "Tanto tiempo aprendiendo para ser empleado y terminar con ingresos lineales que no alcanzan para nada. Irónico, ¿no?",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Sueldo",
+     "i": "dinero",
+     "d": "Ingresos lineales",
+     "res": "LINEAL"
+    },
+    "b": {
+     "t": "Gastos",
+     "i": "grafica",
+     "d": "Suben cada año",
+     "res": "SUBEN",
+     "palabra": "alcanzan",
+     "mal": true
+    }
+   }
+  },
+  {
+   "texto": "En Sumiago le dedicas unas horas al día a tu propio negocio, con las herramientas que te damos.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "SUMIAGO",
+    "items": [
+     {
+      "t": "Unas horas al día",
+      "i": "reloj",
+      "palabra": "horas"
+     },
+     {
+      "t": "Tu propio negocio",
+      "i": "tienda",
+      "palabra": "negocio"
+     },
+     {
+      "t": "Herramientas",
+      "i": "check",
+      "palabra": "herramientas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y aprendiendo con las tareas diarias que te recomendamos, puedes ganar desde los primeros meses de dos a cinco sueldos mínimos.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "2 a 5",
+    "conteo": false,
+    "etiqueta": "sueldos mínimos",
+    "sub": "con tareas diarias y constancia",
+    "aviso": "Ejemplo ilustrativo: los resultados dependen de tu trabajo y no están garantizados."
+   }
+  },
+  {
+   "texto": "Ve a mi perfil y dale clic al enlace para que te registres en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Regístrate en Sumiago",
+    "boton": "LINK EN MI PERFIL",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Tu propio negocio con Sumiago",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "20 AÑOS",
+   "ESTUDIANDO",
+   "¿PARA QUÉ?"
+  ],
+  "puntos": [
+   "Preescolar, primaria, bachillerato y universidad",
+   "Un empleo con ingresos lineales",
+   "Tu propio negocio unas horas al día",
+   "Regístrate con el link de mi perfil"
+  ]
+ }
+}

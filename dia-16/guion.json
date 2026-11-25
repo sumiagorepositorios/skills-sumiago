@@ -1,0 +1,174 @@
+{
+ "titulo": "Gana comisiones compartiendo anuncios (Dropshipping)",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "comisiones",
+  "peso",
+  "anuncio",
+  "dropshipping",
+  "porcentaje",
+  "comisión",
+  "enlace",
+  "whatsapp",
+  "facebook",
+  "telegram",
+  "comparta",
+  "vendedor",
+  "voluntario",
+  "honesto",
+  "regístrate",
+  "gratis"
+ ],
+ "frases": [
+  {
+   "texto": "¿Sabías que puedes ganar comisiones vendiendo artículos de otras personas, sin invertir un peso?",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Ganar vendiendo",
+     "cosas que NO son tuyas?"
+    ],
+    "tam": 52,
+    "icono": "dinero"
+   }
+  },
+  {
+   "texto": "Muchos venden su carro, su celular o sus productos, pero nadie ve su anuncio.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "0",
+    "conteo": false,
+    "etiqueta": "visitas al anuncio",
+    "sub": "Vendo celular, buen estado"
+   }
+  },
+  {
+   "texto": "En el marketplace de Sumiago, el vendedor activa Dropshipping y ofrece un porcentaje de comisión a quien le ayude a vender.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Publicar artículo",
+    "filas": [
+     {
+      "t": "Celular Samsung A54"
+     },
+     {
+      "t": "$ 950.000"
+     },
+     {
+      "t": "☑ Dropshipping",
+      "rojo": true,
+      "palabra": "dropshipping"
+     },
+     {
+      "t": "Comisión: 9 %",
+      "palabra": "porcentaje"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tú entras al anuncio, tocas el botón verde «Gana comisión» y se copia tu enlace personal.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Celular Samsung A54",
+    "filas": [
+     {
+      "t": "$ 950.000"
+     },
+     {
+      "t": "Tu enlace #14 copiado",
+      "palabra": "copia"
+     }
+    ],
+    "boton": "Gana comisión 10 %",
+    "boton_palabra": "botón"
+   }
+  },
+  {
+   "texto": "Compártelo en tus estados de WhatsApp, grupos de Facebook y Telegram. Entre más lo compartas, a más personas llegas.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Compártelo",
+    "items": [
+     {
+      "t": "WhatsApp",
+      "i": "chat",
+      "palabra": "whatsapp"
+     },
+     {
+      "t": "Facebook",
+      "i": "persona",
+      "palabra": "facebook"
+     },
+     {
+      "t": "Telegram",
+      "i": "play",
+      "palabra": "telegram"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cuando alguien llega por tu enlace y contacta al vendedor, Sumiago le avisa que fuiste tú quien le ayudó, y a ti te llegan los datos del vendedor.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Tu enlace funcionó",
+    "items": [
+     {
+      "t": "Alguien llegó por ti",
+      "i": "enlace",
+      "palabra": "llega"
+     },
+     {
+      "t": "Aviso al vendedor",
+      "i": "correo",
+      "palabra": "avisa"
+     },
+     {
+      "t": "Datos del vendedor",
+      "i": "persona",
+      "palabra": "datos"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ojo: la comisión es un acuerdo voluntario entre tú y el vendedor. Sumiago no la cobra ni la garantiza, pero le pedimos al vendedor ser honesto y recompensarte.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Seamos",
+     "honestos"
+    ],
+    "icono": "escudo",
+    "sub": "Comisión voluntaria entre usuarios"
+   }
+  },
+  {
+   "texto": "Y si tú eres el vendedor, activa la comisión y deja que cientos de personas compartan tu anuncio por ti. Regístrate gratis en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "¿Eres vendedor? Activa la comisión",
+    "boton": "REGÍSTRATE GRATIS",
+    "boton_palabra": "regístrate"
+   }
+  }
+ ],
+ "cierre_texto": "sumiago.com/marketplace",
+ "cierre_boton": "REGÍSTRATE GRATIS",
+ "pc": {
+  "titulo": [
+   "GANA COMISIONES",
+   "COMPARTIENDO",
+   "ANUNCIOS"
+  ],
+  "puntos": [
+   "El vendedor activa Dropshipping",
+   "Tú copias tu enlace con «Gana comisión»",
+   "Compártelo en tus redes",
+   "Acuerdo voluntario y honesto"
+  ]
+ }
+}

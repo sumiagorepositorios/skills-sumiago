@@ -1,0 +1,179 @@
+{
+ "titulo": "¿Por qué unos videos tienen millones de visitas?",
+ "voz": "narrador",
+ "tema": "oscuro",
+ "musica": "misterio",
+ "pausa": 0.25,
+ "palabras_clave": [
+  "millones",
+  "200",
+  "pulgar",
+  "segundos",
+  "algoritmo",
+  "miles",
+  "gancho",
+  "promete",
+  "pregunta",
+  "canción",
+  "coro",
+  "final",
+  "principio",
+  "compartan",
+  "útil",
+  "sumiago",
+  "comunidad"
+ ],
+ "frases": [
+  {
+   "texto": "¿Por qué unos videos tienen millones de visitas y el tuyo se queda en 200?",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Tu video",
+     "i": "play",
+     "d": "200 visitas",
+     "res": "200"
+    },
+    "b": {
+     "t": "Viral",
+     "i": "estrella",
+     "d": "Millones de visitas",
+     "res": "2,4 M",
+     "palabra": "millones"
+    }
+   }
+  },
+  {
+   "texto": "Porque no compites solo contra otros videos. Compites contra un pulgar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Compites contra",
+     "un pulgar"
+    ],
+    "icono": "play"
+   }
+  },
+  {
+   "texto": "En promedio, la gente le da dos segundos a cada video antes de deslizar.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "2",
+    "conteo": false,
+    "etiqueta": "segundos",
+    "sub": "antes de deslizar"
+   }
+  },
+  {
+   "texto": "Y el algoritmo primero lo muestra a unos pocos. Si se quedan, se lo enseña a miles.",
+   "escena": {
+    "tipo": "linea",
+    "items": [
+     {
+      "t": "Unos pocos",
+      "v": 1,
+      "etq": "3",
+      "palabra": "pocos"
+     },
+     {
+      "t": "Si se quedan",
+      "v": 30,
+      "etq": "100",
+      "palabra": "quedan"
+     },
+     {
+      "t": "Miles",
+      "v": 100,
+      "etq": "1000+",
+      "palabra": "miles"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Por eso lo primero es el gancho.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "1. El",
+     "GANCHO"
+    ],
+    "icono": "alerta"
+   }
+  },
+  {
+   "texto": "En una frase dices de qué va y prometes algo.",
+   "escena": {
+    "tipo": "lista",
+    "n": "1",
+    "icono": "chat",
+    "titulo": "El gancho",
+    "detalle": "Una frase: de qué va el video y qué prometes."
+   }
+  },
+  {
+   "texto": "Después, cada frase responde una pregunta y abre otra, para que nadie se vaya.",
+   "escena": {
+    "tipo": "lista",
+    "n": "2",
+    "icono": "?",
+    "titulo": "Pregunta y respuesta",
+    "detalle": "Cada frase responde una pregunta y abre otra."
+   }
+  },
+  {
+   "texto": "Es como una canción que se corta justo antes del coro: el cerebro necesita terminarla.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Antes del",
+     "CORO"
+    ],
+    "icono": "play"
+   }
+  },
+  {
+   "texto": "Y el final se une con el principio, para que el video vuelva a empezar sin que lo notes.",
+   "escena": {
+    "tipo": "lista",
+    "n": "3",
+    "icono": "reloj",
+    "titulo": "Final = inicio",
+    "detalle": "El video vuelve a empezar sin que lo notes."
+   }
+  },
+  {
+   "texto": "Pero lo que más lo empuja es que lo compartan. Si sorprende o enseña algo útil, la gente lo envía.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "88.836",
+    "etiqueta": "veces compartido",
+    "sub": "si sorprende o enseña algo útil"
+   }
+  },
+  {
+   "texto": "Si quieres aprender a hacer este tipo de videos, entra al enlace de mi biografía y regístrate en Sumiago. Mientras aprendes, ganas dentro de la comunidad.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Aprende a crear videos virales",
+    "boton": "ENLACE EN MI BIOGRAFÍA",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Aprende · Crea · Gana",
+ "cierre_boton": "ENLACE EN MI BIOGRAFÍA",
+ "pc": {
+  "titulo": [
+   "¿POR QUÉ UNOS",
+   "VIDEOS SON",
+   "VIRALES?"
+  ],
+  "puntos": [
+   "Gancho en los primeros segundos",
+   "Cada frase abre otra pregunta",
+   "El final se une con el inicio",
+   "Que sorprenda o enseñe algo útil"
+  ]
+ }
+}

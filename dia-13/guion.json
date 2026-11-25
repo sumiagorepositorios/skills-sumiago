@@ -1,0 +1,254 @@
+{
+ "titulo": "Contrátame Sumiago: empleo y talento",
+ "voz": "presentador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "empleo",
+  "empleado",
+  "atención",
+  "países",
+  "contrátame",
+  "talento",
+  "empresas",
+  "gratis",
+  "cinco",
+  "habilidades",
+  "idiomas",
+  "disponibilidad",
+  "protegidos",
+  "filtra",
+  "académico",
+  "directamente",
+  "oportunidades",
+  "regístrate",
+  "hoy"
+ ],
+ "frases": [
+  {
+   "texto": "¿Buscas empleo o buscas al empleado perfecto?",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Busco empleo",
+     "i": "persona",
+     "d": "Personas con talento",
+     "res": "TALENTO",
+     "mal": false
+    },
+    "b": {
+     "t": "Busco empleados",
+     "i": "maleta",
+     "d": "Empresas que contratan",
+     "res": "EMPRESAS",
+     "palabra": "buscas",
+     "mal": false
+    }
+   }
+  },
+  {
+   "texto": "¡Atención, empresas y personas de todos los países!",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¡ATENCIÓN!",
+     "Todos los países"
+    ],
+    "icono": "mundo",
+    "rojo": [
+     0
+    ]
+   }
+  },
+  {
+   "texto": "Llegó Contrátame Sumiago, la plataforma número uno para conectar el talento con las empresas.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "CONTRÁTAME",
+     "SUMIAGO"
+    ],
+    "icono": "logo",
+    "sub": "Talento + Empresas"
+   }
+  },
+  {
+   "texto": "Si buscas trabajo, publica tu hoja de vida gratis en solo cinco pasos.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Hoja de vida · gratis",
+    "filas": [
+     "1. Datos básicos",
+     "2. Perfil profesional",
+     "3. Experiencia",
+     "4. Disponibilidad",
+     "5. Documentos"
+    ]
+   }
+  },
+  {
+   "texto": "Agrega tu experiencia, tus habilidades, tus idiomas y tu disponibilidad.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "María González",
+    "items": [
+     {
+      "t": "Experiencia",
+      "i": "maleta",
+      "palabra": "experiencia"
+     },
+     {
+      "t": "Habilidades",
+      "i": "estrella",
+      "palabra": "habilidades"
+     },
+     {
+      "t": "Idiomas",
+      "i": "mundo",
+      "palabra": "idiomas"
+     },
+     {
+      "t": "Disponibilidad",
+      "i": "reloj",
+      "palabra": "disponibilidad"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tú decides qué se publica: tus datos están protegidos.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Tus datos",
+     "protegidos"
+    ],
+    "icono": "escudo"
+   }
+  },
+  {
+   "texto": "Y si tienes una empresa, filtra por país, ciudad, experiencia y nivel académico.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Encuentra talento",
+    "filas": [
+     {
+      "t": "País",
+      "palabra": "país"
+     },
+     {
+      "t": "Ciudad",
+      "palabra": "ciudad"
+     },
+     {
+      "t": "Experiencia",
+      "palabra": "experiencia"
+     },
+     {
+      "t": "Nivel académico",
+      "palabra": "nivel"
+     },
+     {
+      "t": "BUSCAR TALENTO",
+      "rojo": true,
+      "palabra": "académico"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Encuentra al candidato ideal en segundos y contáctalo directamente.",
+   "escena": {
+    "tipo": "tarjetas",
+    "items": [
+     {
+      "t": "Carlos M.",
+      "i": "persona"
+     },
+     {
+      "t": "Valentina R.",
+      "i": "persona",
+      "palabra": "ideal"
+     },
+     {
+      "t": "Contactar",
+      "i": "chat",
+      "palabra": "contáctalo"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Administración, ventas, tecnología, salud, construcción, trabajo remoto y mucho más.",
+   "escena": {
+    "tipo": "tarjetas",
+    "items": [
+     {
+      "t": "Administración",
+      "i": "maleta",
+      "palabra": "administración"
+     },
+     {
+      "t": "Ventas",
+      "i": "dinero",
+      "palabra": "ventas"
+     },
+     {
+      "t": "Tecnología",
+      "i": "telefono",
+      "palabra": "tecnología"
+     },
+     {
+      "t": "Salud",
+      "i": "+",
+      "palabra": "salud"
+     },
+     {
+      "t": "Construcción",
+      "i": "tienda",
+      "palabra": "construcción"
+     },
+     {
+      "t": "Remoto",
+      "i": "mundo",
+      "palabra": "remoto"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Miles de oportunidades te están esperando.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Miles de",
+     "oportunidades"
+    ],
+    "icono": "estrella"
+   }
+  },
+  {
+   "texto": "Regístrate gratis en Sumiago y entra a Contrataciones. ¡Tu próximo empleo empieza hoy!",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Tu próximo empleo empieza hoy",
+    "boton": "REGÍSTRATE GRATIS",
+    "boton_palabra": "regístrate"
+   }
+  }
+ ],
+ "cierre_texto": "Contrátame Sumiago",
+ "cierre_boton": "REGÍSTRATE · LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "CONTRÁTAME",
+   "SUMIAGO"
+  ],
+  "puntos": [
+   "Hoja de vida gratis en 5 pasos",
+   "Tus datos protegidos",
+   "Empresas filtran y te contactan",
+   "Todas las áreas y países"
+  ]
+ }
+}

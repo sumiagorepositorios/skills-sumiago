@@ -1,0 +1,215 @@
+{
+ "titulo": "Mismo carro, dos vendedores: Pedro y Juan",
+ "voz": "narrador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "mismo",
+  "carro",
+  "meses",
+  "días",
+  "pedro",
+  "periódico",
+  "celular",
+  "juan",
+  "gratis",
+  "fotoclasificado",
+  "sumiago",
+  "fotos",
+  "precio",
+  "semana",
+  "correo",
+  "ciudad",
+  "citaron",
+  "reputación",
+  "rápido",
+  "eficaz",
+  "vehículo"
+ ],
+ "frases": [
+  {
+   "texto": "Dos personas venden el mismo carro. Uno tardó meses y el otro lo vendió en días.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Pedro",
+     "i": "carro",
+     "d": "Lo vendió en meses",
+     "res": "MESES"
+    },
+    "b": {
+     "t": "Juan",
+     "i": "carro",
+     "d": "Lo vendió en días",
+     "res": "DÍAS",
+     "palabra": "otro"
+    }
+   }
+  },
+  {
+   "texto": "Pedro le pegó al vidrio un letrero de «Se vende» y pagó un aviso en el clasificado del periódico de su ciudad.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "PEDRO",
+     "aviso en el periódico"
+    ],
+    "rojo": [],
+    "icono": "libro",
+    "tam": 56
+   }
+  },
+  {
+   "texto": "Pero hoy casi nadie compra el periódico: las noticias se leen en el celular.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Periódico",
+     "i": "libro",
+     "d": "Casi nadie lo compra",
+     "res": "NADIE"
+    },
+    "b": {
+     "t": "Celular",
+     "i": "telefono",
+     "d": "Las noticias se leen aquí",
+     "res": "TODOS",
+     "palabra": "celular"
+    }
+   }
+  },
+  {
+   "texto": "Resultado: pasan los meses y el carro de Pedro sigue ahí.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "MESES",
+    "conteo": false,
+    "etiqueta": "y el carro sigue ahí"
+   }
+  },
+  {
+   "texto": "Juan, en cambio, lo publicó totalmente gratis en el fotoclasificado de Sumiago.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Fotoclasificados",
+    "filas": [
+     {
+      "t": "Sedán 2019",
+      "palabra": "publicó"
+     },
+     {
+      "t": "GRATIS",
+      "rojo": true,
+      "palabra": "gratis"
+     }
+    ],
+    "boton": "PUBLICAR",
+    "boton_palabra": "fotoclasificado"
+   }
+  },
+  {
+   "texto": "Subió sus fotos, el precio y todas las características.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Sedán 2019",
+    "filas": [
+     {
+      "t": "✓ Fotos",
+      "palabra": "fotos"
+     },
+     {
+      "t": "✓ Precio",
+      "palabra": "precio"
+     },
+     {
+      "t": "✓ Kilometraje",
+      "palabra": "características"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y cada semana Sumiago envía un correo con los vehículos en venta a los usuarios de la misma ciudad de Juan.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Cada semana",
+    "items": [
+     {
+      "t": "Correo",
+      "i": "correo",
+      "palabra": "correo"
+     },
+     {
+      "t": "Vehículos en venta",
+      "i": "carro",
+      "palabra": "vehículos"
+     },
+     {
+      "t": "Tu ciudad",
+      "i": "ubicacion",
+      "palabra": "ciudad"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Uno de ellos se interesó, le escribió y se citaron para ver el carro en persona.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B",
+    "burbuja": "¿Sigue disponible?"
+   }
+  },
+  {
+   "texto": "Le gustó, lo compró y calificó a Juan, que ahora tiene más reputación en Sumiago.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "★★★★★",
+    "conteo": false,
+    "etiqueta": "¡VENDIDO!",
+    "sub": "+ reputación para Juan"
+   }
+  },
+  {
+   "texto": "Así de sencillo se vende hoy: rápido y eficaz.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Pedro",
+     "i": "persona",
+     "d": "Meses",
+     "res": "LENTO"
+    },
+    "b": {
+     "t": "Juan",
+     "i": "persona",
+     "d": "Días",
+     "res": "RÁPIDO",
+     "palabra": "rápido"
+    }
+   }
+  },
+  {
+   "texto": "Entra al enlace de mi perfil y comienza a vender tu vehículo hoy en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Publica tu vehículo hoy, gratis",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Gratis en el fotoclasificado",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "MISMO CARRO,",
+   "DOS VENDEDORES"
+  ],
+  "puntos": [
+   "Pedro: letrero y periódico",
+   "Juan: fotoclasificado gratis de Sumiago",
+   "Correo semanal a su ciudad",
+   "Vendido en días y más reputación"
+  ]
+ }
+}

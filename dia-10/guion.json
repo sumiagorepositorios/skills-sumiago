@@ -1,0 +1,161 @@
+{
+ "titulo": "Empieza desde cero en Sumiago",
+ "voz": "presentador",
+ "tema": "claro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "dinero",
+  "empezar",
+  "cero",
+  "gratis",
+  "portada",
+  "marketplace",
+  "tienda",
+  "logo",
+  "membresía",
+  "cursos",
+  "tareas",
+  "videos",
+  "soporte",
+  "lugar",
+  "programar",
+  "sumiago.com",
+  "perfil"
+ ],
+ "frases": [
+  {
+   "texto": "Todos quieren ganar dinero en internet, pero nadie te enseña de verdad cómo empezar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "¿Cómo empezar",
+     "en internet?"
+    ],
+    "icono": "mundo"
+   }
+  },
+  {
+   "texto": "En Sumiago empiezas desde cero: creas tu cuenta gratis, armas tu portada de negocios y publicas tu primer artículo en el marketplace.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Tareas · desde cero",
+    "filas": [
+     {
+      "t": "✓ Crear tu cuenta gratis",
+      "palabra": "cuenta"
+     },
+     {
+      "t": "✓ Armar tu portada",
+      "palabra": "portada"
+     },
+     {
+      "t": "✓ Publicar en el Marketplace",
+      "rojo": true,
+      "palabra": "publicas"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Luego abres tu propia tienda con tu logo y tu enlace para compartir por WhatsApp.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Ferrelandia",
+    "filas": [
+     {
+      "t": "Tu logo",
+      "palabra": "logo"
+     },
+     {
+      "t": "Tu enlace",
+      "palabra": "enlace"
+     }
+    ],
+    "boton": "Compartir por WhatsApp",
+    "boton_palabra": "whatsapp"
+   }
+  },
+  {
+   "texto": "Y con la membresía entras a Gana con Marketing: cursos, tareas diarias, videos virales y soporte.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Con la membresía",
+    "items": [
+     {
+      "t": "Cursos",
+      "i": "libro",
+      "palabra": "cursos"
+     },
+     {
+      "t": "Tareas diarias",
+      "i": "check",
+      "palabra": "tareas"
+     },
+     {
+      "t": "Videos virales",
+      "i": "play",
+      "palabra": "videos"
+     },
+     {
+      "t": "Soporte",
+      "i": "chat",
+      "palabra": "soporte"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cursos, tienda, marketplace y comunidad: todo en un solo lugar.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Todo en",
+     "un solo lugar"
+    ],
+    "icono": "logo"
+   }
+  },
+  {
+   "texto": "Es mejor que andar armando todo por separado, sin complicarte y sin saber programar.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Por separado",
+     "i": "alerta",
+     "d": "Muchas apps, pagos y configuraciones",
+     "res": "COMPLICADO"
+    },
+    "b": {
+     "t": "Sumiago",
+     "i": "check",
+     "d": "Todo junto y sin saber programar",
+     "res": "FÁCIL",
+     "palabra": "sin"
+    }
+   }
+  },
+  {
+   "texto": "Entra hoy mismo a sumiago.com, crea tu cuenta y empieza. El link está en mi perfil.",
+   "voz_texto": "Entra hoy mismo a sumiago punto com, crea tu cuenta y empieza. El link está en mi perfil.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Empieza hoy desde cero",
+    "boton_palabra": "link"
+   }
+  }
+ ],
+ "cierre_texto": "Empieza desde cero",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "EMPIEZA",
+   "DESDE CERO"
+  ],
+  "puntos": [
+   "Cuenta y portada gratis",
+   "Tu primer artículo en el Marketplace",
+   "Tu tienda con logo y enlace",
+   "Gana con Marketing con la membresía"
+  ]
+ }
+}

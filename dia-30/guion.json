@@ -1,0 +1,179 @@
+{
+ "titulo": "El cliente que siempre pide rebaja",
+ "voz": "narrador",
+ "tema": "claro",
+ "musica": "alegre",
+ "pausa": 0.2,
+ "personaje_b": "amiga",
+ "palabras_clave": [
+  "ochenta",
+  "veinte",
+  "abrazo",
+  "tía",
+  "diez",
+  "basta",
+  "marketplace",
+  "sumiago",
+  "última",
+  "oferta",
+  "setenta",
+  "aceptada",
+  "gratis",
+  "rebajas"
+ ],
+ "frases": [
+  {
+   "texto": "¿En cuánto me dejas la bici?",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Ochenta dólares.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "¿Ochenta? Te doy veinte.",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "¿Veinte? Eso no alcanza ni para las llantas.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "Bueno… veinte y un abrazo.",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Con ese abrazo ya me estás debiendo.",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "Veinte, un abrazo y te recomiendo con mi tía.",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "¿Tu tía? ¿Y ella cuánto ofrece?",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "A"
+   }
+  },
+  {
+   "texto": "Diez.",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "¡Basta de discutir! Mejor publico en el marketplace de Sumiago.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "MARKETPLACE",
+     "SUMIAGO"
+    ],
+    "rojo": [
+     0
+    ],
+    "icono": "logo",
+    "sub": "sin discutir por rebajas"
+   }
+  },
+  {
+   "texto": "¿Y entonces cómo te ofrezco?",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "Fácil: tú pones tu última oferta y yo solo la acepto o no.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "Bicicleta de ruta · $80",
+    "filas": [
+     {
+      "t": "Mi última oferta",
+      "rojo": true,
+      "palabra": "última"
+     },
+     {
+      "t": "Aceptar",
+      "palabra": "acepto"
+     },
+     {
+      "t": "Rechazar",
+      "palabra": "no"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mi última oferta: setenta.",
+   "voz": "femenina",
+   "escena": {
+    "tipo": "dialogo",
+    "quien": "B"
+   }
+  },
+  {
+   "texto": "¡Aceptada!",
+   "escena": {
+    "tipo": "dato",
+    "valor": "¡ACEPTADA!",
+    "conteo": false,
+    "etiqueta": "$70 · Bicicleta de ruta"
+   }
+  },
+  {
+   "texto": "Publica gratis en el marketplace de Sumiago y deja de discutir por rebajas.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Publica gratis y que te ofrezcan",
+    "boton_palabra": "publica"
+   }
+  }
+ ],
+ "cierre_texto": "Publica gratis en el Marketplace",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "EL CLIENTE QUE",
+   "SIEMPRE PIDE",
+   "REBAJA"
+  ],
+  "puntos": [
+   "Publica gratis en el Marketplace",
+   "Te hacen su última oferta",
+   "Tú solo aceptas o no",
+   "Sin discutir por rebajas"
+  ]
+ }
+}

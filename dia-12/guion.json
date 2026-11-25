@@ -1,0 +1,181 @@
+{
+ "titulo": "¿Cuántas horas pasas en redes?",
+ "voz": "presentador",
+ "tema": "oscuro",
+ "musica": "alegre",
+ "palabras_clave": [
+  "horas",
+  "redes",
+  "nada",
+  "Sumiago",
+  "marketplace",
+  "gratis",
+  "tienda",
+  "portada",
+  "membresía",
+  "cursos",
+  "comisión",
+  "directa",
+  "favor",
+  "registrarte"
+ ],
+ "frases": [
+  {
+   "texto": "¿Cuántas horas al día pasas en redes sociales?",
+   "escena": {
+    "tipo": "dato",
+    "valor": "6 h",
+    "conteo": false,
+    "etiqueta": "al día en redes",
+    "sub": "videos, chats y publicaciones"
+   }
+  },
+  {
+   "texto": "Videos, chats, publicaciones… y al final del mes no ganaste nada.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "$0",
+    "conteo": false,
+    "etiqueta": "Fin de mes",
+    "sub": "lo que ganaste mirando"
+   }
+  },
+  {
+   "texto": "Para eso existe Sumiago.",
+   "escena": {
+    "tipo": "titulo",
+    "lineas": [
+     "Para eso existe",
+     "SUMIAGO"
+    ],
+    "icono": "logo"
+   }
+  },
+  {
+   "texto": "Publicas tus artículos en el marketplace de tu país, gratis.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Marketplace",
+    "items": [
+     {
+      "t": "Ropa",
+      "i": "tienda",
+      "palabra": "artículos"
+     },
+     {
+      "t": "Celulares",
+      "i": "telefono",
+      "palabra": "marketplace"
+     },
+     {
+      "t": "Gratis",
+      "i": "check",
+      "palabra": "gratis"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Creas tu propia tienda con tu enlace y tu portada de negocios para compartir en tus redes.",
+   "escena": {
+    "tipo": "telefono",
+    "titulo": "@tu-negocio",
+    "filas": [
+     {
+      "t": "Mi tienda",
+      "rojo": true,
+      "palabra": "tienda"
+     },
+     {
+      "t": "WhatsApp",
+      "palabra": "enlace"
+     },
+     {
+      "t": "Catálogo",
+      "palabra": "portada"
+     },
+     {
+      "t": "Instagram",
+      "palabra": "compartir"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Con la membresía entras a Gana con Marketing: cursos, tareas diarias y videos virales.",
+   "escena": {
+    "tipo": "tarjetas",
+    "titulo": "Gana con Marketing",
+    "items": [
+     {
+      "t": "Cursos",
+      "i": "libro",
+      "palabra": "cursos"
+     },
+     {
+      "t": "Tareas diarias",
+      "i": "check",
+      "palabra": "tareas"
+     },
+     {
+      "t": "Videos virales",
+      "i": "play",
+      "palabra": "videos"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Y cada persona que invitas te deja una comisión directa.",
+   "escena": {
+    "tipo": "dato",
+    "valor": "Comisión",
+    "conteo": false,
+    "etiqueta": "directa por cada persona",
+    "sub": "que invitas"
+   }
+  },
+  {
+   "texto": "Deja de solo mirar las redes: empieza a usarlas a tu favor.",
+   "escena": {
+    "tipo": "comparacion",
+    "a": {
+     "t": "Mirar",
+     "i": "play",
+     "d": "Horas de videos y nada al final del mes",
+     "res": "SOLO MIRAR"
+    },
+    "b": {
+     "t": "Usar",
+     "i": "grafica",
+     "d": "Tu tienda, tu portada y tus cursos",
+     "res": "A TU FAVOR",
+     "palabra": "empieza"
+    }
+   }
+  },
+  {
+   "texto": "Visita el enlace de mi perfil para registrarte en Sumiago.",
+   "escena": {
+    "tipo": "cierre",
+    "texto": "Regístrate gratis en Sumiago",
+    "boton_palabra": "enlace"
+   }
+  }
+ ],
+ "cierre_texto": "Usa tus redes a tu favor",
+ "cierre_boton": "LINK EN MI PERFIL",
+ "pc": {
+  "titulo": [
+   "¿CUÁNTAS HORAS",
+   "PASAS EN REDES?",
+   "ÚSALAS A TU FAVOR"
+  ],
+  "puntos": [
+   "Marketplace gratis en tu país",
+   "Tu tienda y tu portada de negocios",
+   "Gana con Marketing con la membresía",
+   "Comisión directa por invitar"
+  ]
+ }
+}
