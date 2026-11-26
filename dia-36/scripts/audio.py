@@ -40,7 +40,7 @@ out += mus * .9
 def engine(): x = tt(1.0); return (np.sin(2 * np.pi * (70 + 30 * x) * x) * (0.6 + .4 * np.sign(np.sin(2 * np.pi * 18 * x)))) * env(len(x), .05, .3) * .25
 for i in range(1, 12): add(whoosh(), r.ct(i) - .5, .7)
 add(engine(), r.ct(0) + .1, .8); add(thud(), r.wt(0, 'vendió'), .8); add(pop(), r.wt(0, 'nunca'))
-add(pop(), r.wt(1, '2')); add(thud(), r.wt(1, 'nadie'), .5)
+add(pop(), r.wt(1, 'semana')); add(thud(), r.wt(1, 'nadie'), .5)
 add(pop(), r.wt(2, 'notó')); add(ding(), r.wt(2, 'dropshipping'))
 add(pop(), r.wt(3, 'comisión')); add(pop(), r.wt(3, 'ayude'))
 add(pop(), r.ct(4) - .2); add(shutter(), r.wt(4, 'tocó') + .4, .6); add(ding(2093), r.wt(4, 'copió'))

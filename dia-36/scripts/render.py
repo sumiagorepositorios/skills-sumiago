@@ -46,7 +46,7 @@ def wt(ci, word, n=0):
             k += 1
     return ct(ci)
 KEY = {'moto', 'moto.', 'nunca', '2', 'meses', 'nadie', 'marketplace', 'dropshipping.', 'dropshipping', 'comisión', 'vender.', 'gana', 'enlace', 'whatsapp', 'barrio.',
-       'cuarto', 'hernán.', 'gracias', 'camilo.', 'vendió', 'cumplió', 'voluntario', 'cobra', 'garantiza.', 'tuyas…', 'tuyas', 'link', 'tuya.'}
+       'cuarto', 'semana', 'dropshippero', 'ti.', 'hernán.', 'gracias', 'camilo.', 'vendió', 'cumplió', 'voluntario', 'cobra', 'garantiza.', 'tuyas…', 'tuyas', 'link', 'tuya.'}
 def is_key(w): return w.strip('¿?.,:«»…').lower() in KEY
 
 # ---------- fondos ----------
@@ -368,7 +368,7 @@ def sc1(t, lt):
     d.rounded_rectangle((300, 640, 500, 720), 10, fill=(255, 255, 255), outline=(40, 40, 46), width=4); d.line((400, 720, 400, 780), fill=(40, 40, 46), width=6)
     d.text((400, 680), 'SE VENDE', font=F('Inter-Black.otf', 32), fill=RED, anchor='mm')
     L = Image.new('RGBA', (W, H), (0, 0, 0, 0)); hernan(ImageDraw.Draw(L), 140, 760, 1.7); im.alpha_composite(L)
-    chip(im, 560, 400, '2 MESES', t - wt(1, '2'), col=(36, 36, 40), size=28)
+    chip(im, 560, 400, '1 SEMANA', t - wt(1, 'semana'), col=(36, 36, 40), size=28)
     q = t - wt(1, 'nadie')
     if q > 0:
         r = (440, 450, 680, 560); card(im, r, (255, 255, 255), 20); d = BD(im)
@@ -540,8 +540,10 @@ def sc11(t, lt):
         d.rounded_rectangle((cx - 190 * bx * b, cy - 42 * bx * b, cx + 190 * bx * b, cy + 42 * bx * b), 42, fill=(255, 255, 255))
         if b > .5: d.text((cx, cy), 'LINK EN MI PERFIL', font=F('Inter-Black.otf', 30), fill=RED, anchor='mm')
         ay = cy + 70 + 10 * math.sin(t * 8); d.polygon([(cx - 24, ay), (cx + 24, ay), (cx, ay + 34)], fill='white')
-    q = t - wt(11, 'tuya')
-    if q > -.3: mask_text(im, (W / 2, 760), '…no es tuya.', F('Inter-BlackItalic.otf', 50), WHITE, (q + .3) / .4)
+    q = t - wt(11, 'sino')
+    if q > -.3:
+        mask_text(im, (W / 2, 730), '…sino un dropshippero', F('Inter-BlackItalic.otf', 42), WHITE, (q + .3) / .4)
+        mask_text(im, (W / 2, 790), 'de Sumiago por ti.', F('Inter-BlackItalic.otf', 42), WHITE, (q + .1) / .4)
     CAM.update(x0=0, y0=0, z=1); obj('in', (60, 330, 660, 630)); obj('out', (60, 330, 660, 630))
     return im
 
