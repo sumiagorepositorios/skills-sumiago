@@ -1,11 +1,11 @@
 ---
 name: dia-64
-description: Crea el video del Día 64 de Tareas Diarias de Sumiago, "Este video lo hizo una IA" (tipografía en movimiento estilo motion graphics sobre la sección VIDEOS VIRALES: escribes una idea, la IA hace guion, voz, música, efectos y subtítulos, lo renderiza, Ideas Virales y subida a YouTube; cierre "Comenta VIRAL y te paso el enlace"), en móvil 9:16 y PC 16:9, con narrador, música, efectos y logo. Úsala cuando pidan hacer, rehacer o adaptar el video del Día 64 o un video "viral" de texto animado con este estilo.
+description: Crea el video del Día 64 de Tareas Diarias de Sumiago, "Este video lo hizo una IA" (tipografía en movimiento estilo motion graphics sobre la sección VIDEOS VIRALES: escribes una idea, la IA hace guion, voz, música, efectos y subtítulos, lo renderiza, Ideas Virales y subida a YouTube; cierre "Comenta SUMIAGO y te envío toda la información"), en móvil 9:16 y PC 16:9, con narrador, música, efectos y logo. Úsala cuando pidan hacer, rehacer o adaptar el video del Día 64 o un video "viral" de texto animado con este estilo.
 ---
 
 # Día 64 — "Este video lo hizo una IA"
 
-Reel vertical de unos 55 s (1080x1920, 30 fps) hecho solo con texto animado e interfaces, al estilo de los videos virales de "motion graphics hechos con IA". El gancho habla del propio video: «Este video que estás viendo ahora… no lo hizo ningún editor. Lo hizo una inteligencia artificial». Después muestra cómo cualquiera puede hacer lo mismo con **VIDEOS VIRALES** de Sumiago y cierra pidiendo comentar una palabra clave (**VIRAL**) para subir los comentarios.
+Reel vertical de unos 52 s (1080x1920, 30 fps) hecho solo con texto animado e interfaces, al estilo de los videos virales de "motion graphics hechos con IA". El gancho habla del propio video: «Este video que estás viendo ahora… no lo hizo ningún editor. Lo hizo una inteligencia artificial». Después muestra cómo cualquiera puede hacer lo mismo con **VIDEOS VIRALES** de Sumiago y cierra pidiendo comentar una palabra clave (**SUMIAGO**) para subir los comentarios.
 
 Copyright © Sumiago. Uso solo con autorización (ver LICENSE del repositorio).
 
@@ -51,14 +51,14 @@ Para revisar momentos sueltos sin renderizar todo: `python ruta/dia-64/scripts/s
 | 11 | ¿Sin ideas? Ideas Virales… | Tarjetas de videos con vistas que suben y "×41" | pops |
 | 12 | Y lo subes a tu YouTube con un clic | Fondo claro (segundo acto), botón Publicar → Publicado | golpe, clic, ding |
 | 13 | Sin saber editar nada | "EDITAR" tachado, "nada." | barrido |
-| 14 | ¿Quieres probarlo? Comenta VIRAL… | "VIRAL" gigante, caja de comentarios con corazón | tecleo, clic, ding |
+| 14 | ¿Quieres aprender a crear videos así? Comenta SUMIAGO… | "SUMIAGO" gigante, caja de comentarios con corazón | tecleo, clic, ding |
 | — | Cierre | Logo, "Crea tus videos con IA", "LINK EN MI PERFIL" | golpe |
 
 ## Estilo y reglas
 
 - Fondo negro con brillo rojo Sumiago que se mueve; el segundo acto cambia a fondo claro. Rojo `#E10600`, blanco, gris.
 - Palabras que suben desde una máscara, palabras tachadas con una línea roja animada, palabras clave en recuadro rojo, acentos en cursiva serif roja, cursor con etiqueta ("Sumiago"/"Tú") que hace clic, acercamiento lento de cámara en cada escena y transición con desenfoque.
-- La duración de cada escena se ajusta a su frase (`tl.py`) y la música baja cuando habla el narrador.
-- Para cambiar la palabra del cierre (por ejemplo SUMIAGO), cambia la frase 14 en `guion.json` y la palabra `VIRAL` en la escena 15 de `anim.html`.
+- Sin silencios: cada escena dura su frase + 0,2 s y su animación se acelera o frena para caber (`tl.py`). Frases completas de 2–5 s; no usar «…» en el texto de la voz (Fish hace pausas largas). La música baja cuando habla el narrador.
+- Para cambiar la palabra del cierre cambia la frase 14 en `guion.json` y la palabra `SUMIAGO` (dos veces) en la escena 15 de `anim.html`.
 - Funciones reales (verificadas en el código): VIDEOS VIRALES tiene Estudio de Video (guion → voz → Short 9:16 con subtítulos palabra por palabra, música suave y efectos), Ideas Virales (videos de canales pequeños con más vistas que suscriptores) y Mi YouTube (publicar en tu canal). Cada usuario usa sus propias claves; es para miembros con membresía activa.
 - Nada de promesas de ganancias. No escribir el nombre de la plataforma madre.

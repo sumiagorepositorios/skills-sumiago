@@ -1,4 +1,4 @@
-"""Música (sintetizada, sin copyright), efectos y voz con ducking -> fx.wav. Requiere vt/*.wav y dur.json."""
+"""Música (sintetizada, sin copyright), efectos y voz con ducking -> fx.wav. Requiere vt/*.wav, dur.json y k.json."""
 import numpy as np, wave
 SR=44100; import json as _j; T=sum(_j.load(open('dur.json')))+.2; N=int(SR*T)
 rng=np.random.default_rng(7)
@@ -39,12 +39,13 @@ def ding():
     n=int(1.0*SR); t=np.arange(n)/SR; return sum(np.sin(2*np.pi*fr*t)*np.exp(-t/.35) for fr in (1318,1976))*.18
 import json, os
 D=json.load(open('dur.json')); starts=[sum(D[:i]) for i in range(len(D))]
-S=lambda k,t: starts[k]+t
+KK=json.load(open('k.json')) if os.path.exists('k.json') else [1]*len(D)
+S=lambda k,t: starts[k]+t/KK[k]
 for s_ in starts[1:]: add(sfx,s_-.18,whoosh(),.7)
-for i in range(4): add(sfx,.05+i/14,tick())
-for i in range(5): add(sfx,.4+i/14,tick())
+for i in range(4): add(sfx,S(0,.05+i/14),tick())
+for i in range(5): add(sfx,S(0,.4+i/14),tick())
 for i in range(40): add(sfx,S(6,.6+i/24),tick(),.7)
-for i in range(5): add(sfx,S(14,1.8+i/6),tick())
+for i in range(7): add(sfx,S(14,1.8+i/8),tick())
 for k,t in ((1,.9),(1,1.05),(2,.55),(2,1.3),(13,.8)): add(sfx,S(k,t),swipe())
 for k,t in ((0,1.85),(1,1.4),(1,1.5),(1,1.6),(1,1.7),(2,.05),(2,.8),(4,.75),(5,.6),(9,.25),(11,.8),(11,.95),(11,1.1),(12,.5),(14,.6),(15,.1),(15,.9)): add(sfx,S(k,t),pop(480+(S(k,t)*37)%300))
 for k,t in ((5,.55),(6,2.6),(12,1.9),(14,3.4)): add(sfx,S(k,t),click())
@@ -59,7 +60,7 @@ for i in range(15):
     with _w.open(p) as w: x=np.frombuffer(w.readframes(w.getnframes()),'<i2').astype(float)/32768; sr=w.getframerate()
     if sr!=SR: x=np.interp(np.arange(int(len(x)*SR/sr))*sr/SR,np.arange(len(x)),x)
     x=x/ (np.abs(x).max()+1e-9)*.9
-    add(vo,starts[i]+.1,x)
+    add(vo,starts[i]+.05,x)
 # ducking: bajar música cuando habla
 envv=np.convolve(np.abs(vo),np.ones(4410)/4410,'same'); duck=1-.55*np.clip(envv*12,0,1)
 mus*=duck
