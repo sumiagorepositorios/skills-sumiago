@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:H;src:local('Inter Display Black'),local('Inter Black'),url(fonts/InterDisplay-Black.otf)}
+@font-face{font-family:HB;src:local('Inter Display ExtraBold'),local('Inter ExtraBold'),url(fonts/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:M;src:local('Inter Medium'),url(fonts/Inter-Medium.otf)}
+@font-face{font-family:S;src:local('Crimson Text SemiBold Italic'),url(fonts/CrimsonText-SemiBoldItalic.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0a0a0a}
+#bg{position:absolute;inset:0}
+#stage{position:absolute;inset:0;font-family:M;color:#f4f4f4}
+.sc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:360px;transform-origin:50% 40%}
+.lft{align-items:flex-start;padding-left:90px}
+.l{display:block;overflow:hidden;line-height:1.02;padding:0 6px 10px}
+.w{display:inline-block;will-change:transform}
+.big{font-family:H;font-size:190px;letter-spacing:-6px;line-height:.92}
+.mid{font-family:HB;font-size:104px;letter-spacing:-3px}
+.sm{font-family:M;font-size:58px;color:#9a9a9a}
+.ser{font-family:S;font-size:150px;color:#ff3b30;letter-spacing:-1px}
+.red{color:#ff2a1f}
+.box{background:#e10600;color:#fff;padding:0 22px;border-radius:14px}
+.strike{position:relative}
+.strike i{position:absolute;left:-10px;top:52%;height:16px;background:#ff2a1f;border-radius:8px}
+.card{background:#151515;border:2px solid #262626;border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.cur{position:absolute;width:70px;height:70px;z-index:50}
+.cur span{position:absolute;left:46px;top:52px;background:#e10600;color:#fff;font:700 26px M;padding:4px 12px;border-radius:8px;white-space:nowrap}
+.caret{display:inline-block;width:10px;background:#ff2a1f;margin-left:6px;vertical-align:-8px}
+.mono{font-family:'DejaVu Sans Mono',monospace}
+.light{color:#111}
+</style></head>
+<body><div id="bg"></div><div id="stage"></div>
+<script src="dur.js"></script>
+<script>
+const W=1080,H=1920;
+const C=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const P=(t,a,b)=>C((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const bo=x=>{const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+
+// mask reveal: words slide up from inside their line
+function L(words,t,t0,cls='',st=.07){
+  let i=0;
+  const html=words.split('|').map(w=>{
+    const k=eo(P(t,t0+i*st,t0+i*st+.38));i++;
+    return `<span class="w" style="transform:translateY(${(1-k)*115}%)">${w}</span>`;
+  }).join(' ');
+  return `<span class="l ${cls}">${html}</span>`;
+}
+function typed(s,t,t0,cps=18){const n=Math.floor(C((t-t0)*cps,0,s.length));return s.slice(0,n)}
+function caret(t,h=60,on=true){return on?`<span class="caret" style="height:${h}px;opacity:${Math.floor(t*2.4)%2?0:1}"></span>`:''}
+function cursor(x,y,label='Tú',sc=1){
+  return `<div class="cur" style="left:${x}px;top:${y}px;transform:scale(${sc})"><svg width="70" height="70" viewBox="0 0 24 24"><path d="M3 2l16 9-7 1.6-3.4 6.4z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg><span>${label}</span></div>`;
+}
+function strikeW(t,t0,dur=.3){return `<i style="width:calc(${eio(P(t,t0,t0+dur))*100}% + 20px)"></i>`}
+function lerp(a,b,k){return a+(b-a)*k}
+
+const scenes=[
+// 1 hook
+{d:3.6,f:t=>{
+  const big=typed('ESTE',t,.05,14), big2=typed('VIDEO',t,.4,14);
+  const cx=150+Math.min(big2.length?big2.length:big.length,5)*118;
+  return `<div class="sc lft">
+   <span class="l big">${big}${big2?'':caret(t,150,t<.4)}</span>
+   <span class="l big">${big2}${big2&&t<1.3?caret(t,150):''}</span>
+   ${L('que|estás|viendo',t,1.25,'sm')}
+   <span class="l big" style="margin-top:14px"><span class="w box" style="transform:scale(${bo(P(t,1.85,2.25))})">ahora</span></span>
+  </div>${t<1.4?cursor(cx,370+(big2?190:0),'Sumiago'):''}`}},
+// 2
+{d:2.6,f:t=>`<div class="sc">
+   ${L('no|lo|hizo',t,0,'sm')}
+   <span class="l big"><span class="w strike" style="transform:translateY(${(1-eo(P(t,.1,.45)))*115}%)">NINGÚN${strikeW(t,.9)}</span></span>
+   <span class="l big"><span class="w strike" style="transform:translateY(${(1-eo(P(t,.18,.53)))*115}%)">EDITOR${strikeW(t,1.05)}</span></span>
+   <div style="display:flex;gap:34px;margin-top:90px">${['✂','▶','◧','✎'].map((ic,i)=>{const k=bo(P(t,.4+i*.08,.75+i*.08));const x=P(t,1.4+i*.1,1.6+i*.1);
+     return `<div class="card" style="width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:70px;color:#ff5a4f;transform:scale(${k});position:relative">${ic}<div style="position:absolute;right:-14px;top:-14px;width:52px;height:52px;border-radius:50%;background:#e10600;color:#fff;font:700 32px M;display:flex;align-items:center;justify-content:center;transform:scale(${bo(x)})">✕</div></div>`}).join('')}</div>
+  </div>`},
+// 3
+{d:2.4,f:t=>`<div class="sc">
+   ${L('ni',t,0,'sm')}
+   <div class="card" style="margin-top:30px;padding:26px 60px;transform:scale(${bo(P(t,.05,.4))})"><span class="mid strike">CapCut${strikeW(t,.55)}</span></div>
+   ${L('ni',t,.75,'sm')}
+   <div class="card" style="margin-top:30px;padding:26px 60px;transform:scale(${bo(P(t,.8,1.15))})"><span class="mid strike">Premiere${strikeW(t,1.3)}</span></div>
+   ${L('ni|nadie|con|horas|de|timeline',t,1.55,'sm')}
+  </div>`},
+// 4 white flash
+{d:2.2,light:true,f:t=>`<div class="sc" style="padding-top:640px">
+   ${L('Lo|hizo',t,.05,'mid light')}
+   <span class="l"><span class="w ser" style="font-size:230px;color:#e10600;transform:translateY(${(1-eo(P(t,.3,.75)))*115}%)">una IA.</span>${caret(t,150,t>.8)}</span>
+  </div>`},
+// 5
+{d:3.0,f:t=>{const k=P(t,1.3,2.2);
+ return `<div class="sc">
+   ${L('Y|ahora',t,0,'sm')}
+   ${L('TÚ|PUEDES',t,.2,'big')}
+   ${L('HACER',t,.45,'big')}
+   <span class="l big" style="margin-top:10px"><span class="w box" style="transform:scale(${bo(P(t,.75,1.15))}) rotate(${(1-eo(P(t,.75,1.2)))*-8}deg)">LO MISMO</span></span>
+  </div>${cursor(lerp(900,640,eio(k)),lerp(1500,1010,eio(k)),'Tú')}`}},
+// 6 badge
+{d:3.0,f:t=>{const click=P(t,.55,.7);const s=t<.55?1:t<.7?.85:1;
+ return `<div class="sc" style="padding-top:520px">
+   ${L('con',t,0,'sm')}
+   <div style="margin:40px 0;transform:scale(${bo(P(t,.6,1.0))*(1-0.04*Math.sin(click*Math.PI))})">
+    <div style="background:#e10600;border-radius:40px;padding:40px 70px;box-shadow:0 0 120px rgba(225,6,0,.55);text-align:center">
+     <div style="font:700 40px M;color:#ffd6d3;letter-spacing:6px">▶ SECCIÓN</div>
+     <div class="big" style="font-size:150px;color:#fff">VIDEOS<br>VIRALES</div></div></div>
+   ${L('de|<b class="red" style="font-family:HB">Sumiago</b>',t,1.0,'mid')}
+   ${[[150,300,'#e10600',40,0],[880,420,'#fff',26,1],[180,1500,'#777',34,2],[900,1560,'#e10600',22,3]].map(([x,y,c,r,i])=>`<div style="position:absolute;left:${x+Math.sin(t*2+i)*14}px;top:${y+Math.cos(t*2+i)*14}px;width:${r*2}px;height:${r*2}px;border:8px solid ${c};border-radius:${i%2?'10px':'50%'};transform:scale(${bo(P(t,.7+i*.08,1.1+i*.08))}) rotate(${t*40}deg)"></div>`).join('')}
+  </div>${cursor(lerp(760,600,eio(P(t,0,.55))),lerp(1500,980,eio(P(t,0,.55))),'Tú',s)}`}},
+// 7 idea
+{d:3.6,f:t=>{const txt='Un video sobre cómo ahorrar en diciembre';const ty=typed(txt,t,.6,24);const sent=t>2.6;
+ return `<div class="sc">
+   ${L('Escribes',t,0,'big')}
+   ${L('una|<span class="ser" style="font-size:200px">idea…</span>',t,.15,'big')}
+   <div class="card" style="width:900px;margin-top:110px;padding:34px 38px;display:flex;align-items:center;gap:24px;transform:translateY(${(1-eo(P(t,.25,.7)))*200}px);opacity:${P(t,.25,.5)}">
+     <div style="flex:1;font:500 44px M;color:${ty?'#eee':'#666'};min-height:110px;line-height:1.25">${ty||'Escribe tu idea…'}${t<2.6?caret(t,46):''}</div>
+     <div style="width:96px;height:96px;border-radius:50%;background:#e10600;display:flex;align-items:center;justify-content:center;font:900 50px M;color:#fff;transform:scale(${sent?1-0.15*Math.sin(P(t,2.6,2.8)*Math.PI):1})">↑</div></div>
+   ${sent?`<div style="margin-top:30px;font:500 36px M;color:#888;opacity:${P(t,2.8,3)}">✓ Enviado a la IA</div>`:''}
+  </div>${cursor(lerp(600,905,eio(P(t,2.1,2.6))),lerp(1500,955,eio(P(t,2.1,2.6))),'Tú',t>2.6&&t<2.75?.85:1)}`}},
+// 8 script
+{d:3.4,f:t=>{const lines=['ESCENA 1 — Gancho','“Diciembre te vacía','el bolsillo… salvo que”','ESCENA 2 — Truco #1','“Separa el 10% el','mismo día de pago”','ESCENA 3 — Cierre'];
+ return `<div class="sc">
+   ${L('y|la|IA|escribe',t,0,'mid')}
+   ${L('el|<span class="ser" style="font-size:210px">guion.</span>',t,.2,'big')}
+   <div class="card" style="width:860px;margin-top:80px;padding:44px 50px;transform:rotate(${lerp(-6,-2,eo(P(t,.3,1)))}deg) translateY(${(1-eo(P(t,.3,.8)))*300}px)">
+    <div class="mono" style="font-size:28px;color:#666;margin-bottom:22px">guion_viral.txt</div>
+    ${lines.map((s,i)=>{const k=P(t,.7+i*.24,.9+i*.24);const h=s.startsWith('ESC');return `<div class="mono" style="font-size:${h?32:38}px;color:${h?'#ff4a40':'#ddd'};margin:${h&&i?'22px':'6px'} 0 6px;opacity:${k};transform:translateX(${(1-eo(k))*-40}px)">${s}</div>`}).join('')}
+   </div></div>`}},
+// 9 voice
+{d:3.0,f:t=>{let bars='';for(let i=0;i<46;i++){const a=t>.5?(.25+.75*Math.abs(Math.sin(i*.73+t*9)*Math.sin(i*.31+t*4.3))):0.06;const lit=i/46<P(t,.5,2.9);bars+=`<div style="width:11px;height:${30+a*300}px;border-radius:6px;background:${lit?'#ff2a1f':'#444'}"></div>`}
+ return `<div class="sc">
+   ${L('le|pone',t,0,'sm')}
+   <span class="l big" style="font-size:330px"><span class="w" style="transform:translateY(${(1-eo(P(t,.1,.5)))*115}%)">VOZ</span></span>
+   <div class="card" style="width:900px;margin-top:70px;padding:50px 40px 30px;transform:scale(${eo(P(t,.25,.6))})">
+     <div style="display:flex;align-items:center;justify-content:center;gap:7px;height:340px">${bars}</div>
+     <div class="mono" style="font-size:28px;color:#888;margin-top:24px">● narrador.wav — 00:${String(Math.floor(C(t-.5,0)*9)).padStart(2,'0')}</div></div>
+  </div>`}},
+// 10 timeline
+{d:3.4,f:t=>{const tr=[['Video','#e10600'],['Voz','#ff6b5f'],['Música','#9a9a9a'],['Efectos','#d8d8d8'],['Subtítulos','#ffffff']];const ph=eio(P(t,1.2,3.3));
+ return `<div class="sc">
+   ${L('música,|efectos',t,0,'mid')}
+   ${L('y|<span class="red">subtítulos</span>',t,.25,'mid')}
+   <div class="card" style="width:940px;margin-top:100px;padding:40px 36px;position:relative;transform:perspective(1400px) rotateX(${lerp(25,8,eo(P(t,.2,1)))}deg)">
+     ${tr.map(([n,c],i)=>{const k=eo(P(t,.45+i*.15,1.1+i*.15));return `<div style="display:flex;align-items:center;margin:18px 0"><div style="width:190px;font:500 30px M;color:#999">${n}</div><div style="flex:1;height:54px;background:#202020;border-radius:12px;overflow:hidden"><div style="height:100%;width:${k*(100-i*6)}%;margin-left:${i*3}%;background:${c};border-radius:12px;opacity:.9"></div></div></div>`}).join('')}
+     <div style="position:absolute;top:20px;bottom:20px;left:${226+ph*660}px;width:5px;background:#fff;box-shadow:0 0 18px #fff"></div>
+   </div></div>`}},
+// 11 render
+{d:3.0,f:t=>{const k=eio(P(t,.5,2.3));const done=k>=1;
+ return `<div class="sc">
+   ${L('y|lo|renderiza',t,0,'mid')}
+   <span class="l"><span class="w ser" style="font-size:260px;transform:translateY(${(1-eo(P(t,.2,.6)))*115}%)">solo.</span></span>
+   <div class="card" style="width:880px;margin-top:80px;padding:50px;transform:scale(${done?1+0.05*Math.sin(P(t,2.3,2.6)*Math.PI):eo(P(t,.3,.6))})">
+    <div style="font:700 40px M;color:${done?'#4ade80':'#eee'}">${done?'✓ ¡Listo! video_9x16.mp4':'◌ Renderizando…'}</div>
+    <div style="height:26px;background:#262626;border-radius:13px;margin:34px 0 24px;overflow:hidden"><div style="height:100%;width:${k*100}%;background:linear-gradient(90deg,#e10600,#ff5a4f);border-radius:13px"></div></div>
+    <div class="big" style="font-size:150px">${Math.floor(k*100)}%</div></div>
+  </div>`}},
+// 12 ideas virales
+{d:3.8,f:t=>{const cards=[['3.2M','×41'],['890K','×18'],['1.4M','×27']];
+ return `<div class="sc">
+   ${L('¿Sin|ideas?',t,0,'big')}
+   ${L('<span class="red" style="font-family:HB">Ideas Virales</span>|te|muestra',t,.4,'sm')}
+   ${L('lo|que|está|<span class="ser" style="font-size:90px">explotando</span>',t,.6,'sm')}
+   <div style="display:flex;gap:26px;margin-top:80px">${cards.map(([v,x],i)=>{const k=bo(P(t,.8+i*.15,1.2+i*.15));const n=parseFloat(v)*eo(P(t,1+i*.15,2.6));
+     return `<div class="card" style="width:290px;height:470px;padding:18px;transform:translateY(${(1-k)*400}px) rotate(${(i-1)*4}deg)"><div style="height:280px;border-radius:20px;background:linear-gradient(160deg,#3a0a08,#1d1d1d);display:flex;align-items:center;justify-content:center;font-size:80px;color:#fff">▶</div>
+     <div class="big" style="font-size:66px;margin-top:22px">${n.toFixed(1)}${v.slice(-1)}</div><div style="font:500 26px M;color:#888">vistas</div><div style="position:absolute;right:16px;top:16px" class="box"><span style="font:800 32px HB">${x}</span></div></div>`}).join('')}</div>
+   ${L('más|vistas|que|suscriptores',t,3.6,'sm')}
+  </div>`}},
+// 13 youtube (light act)
+{d:3.4,light:true,f:t=>{const click=t>1.9;const k=P(t,1.9,2.4);
+ return `<div class="sc">
+   ${L('y|lo|subes|a|tu',t,0,'mid light')}
+   <span class="l big"><span class="w" style="color:#e10600;transform:translateY(${(1-eo(P(t,.25,.65)))*115}%)">YouTube</span></span>
+   ${L('con|un|<span class="ser" style="font-size:110px">clic.</span>',t,.45,'sm')}
+   <div style="margin-top:110px;background:${click?'#111':'#e10600'};color:#fff;border-radius:999px;padding:36px 90px;font:800 56px HB;box-shadow:0 24px 60px rgba(225,6,0,.3);transform:scale(${bo(P(t,.5,.9))*(click?1-0.08*Math.sin(P(t,1.9,2.1)*Math.PI):1)})">${click&&k>=1?'✓ Publicado':click?'Subiendo…':'⬆ Publicar'}</div>
+  </div>${cursor(lerp(880,590,eio(P(t,1,1.9))),lerp(1650,975,eio(P(t,1,1.9))),'Tú',t>1.9&&t<2.05?.85:1)}`}},
+// 14 sin editar
+{d:3.0,light:true,f:t=>`<div class="sc" style="padding-top:560px">
+   ${L('sin|saber',t,0,'mid light')}
+   <span class="l big"><span class="w strike light" style="transform:translateY(${(1-eo(P(t,.2,.6)))*115}%)">EDITAR${strikeW(t,.8)}</span></span>
+   <span class="l"><span class="w ser" style="font-size:240px;color:#e10600;transform:translateY(${(1-eo(P(t,1.1,1.5)))*115}%)">nada.</span></span>
+  </div>`},
+// 15 CTA
+{d:5.4,f:t=>{const liked=t>3.4;
+ return `<div class="sc">
+   ${L('¿Quieres|probarlo?',t,0,'mid')}
+   ${L('comenta',t,.35,'big')}
+   <span class="l" style="font-family:H;font-size:250px;letter-spacing:-8px;line-height:.95"><span class="w red" style="transform:translateY(${(1-eo(P(t,.6,1.0)))*115}%) scale(${1+0.04*Math.sin(t*5)})">VIRAL</span></span>
+   <div class="card" style="width:900px;margin-top:60px;padding:36px 40px;transform:translateY(${(1-eo(P(t,1.1,1.6)))*300}px)">
+     <div style="font:700 32px M;color:#888;margin-bottom:26px">Comentarios</div>
+     <div style="display:flex;align-items:center;gap:24px"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#e10600,#555)"></div>
+       <div style="flex:1"><div style="font:500 28px M;color:#888">tú · ahora</div><div style="font:800 48px HB">${typed('VIRAL',t,1.8,6)}${t<2.8&&t>1.6?caret(t,44):''}</div></div>
+       <div style="font-size:64px;color:${liked?'#ff2a1f':'#555'};transform:scale(${liked?bo(P(t,3.4,3.7))*1.0:1})">${liked?'♥':'♡'}</div></div></div>
+   ${L('y|te|paso|el|<span class="ser" style="font-size:96px">enlace</span>',t,2.2,'sm')}
+  </div>${cursor(lerp(900,925,eio(P(t,2.8,3.4))),lerp(1700,1125,eio(P(t,2.8,3.4))),'Sumiago',t>3.4&&t<3.55?.85:1)}`}},
+// 16 logo end
+{d:3.4,light:true,end:true,f:t=>`<div class="sc" style="padding-top:0;justify-content:center">
+   <img src="logo-sumiago.png" style="width:900px;transform:scale(${bo(P(t,.1,.6))})">
+   ${L('Crea|tus|videos|con|<span class="ser" style="font-size:88px;color:#e10600">IA</span>',t,.6,'light" style="font-family:HB;font-size:84px;letter-spacing:-2px')}
+   <div style="margin-top:50px;background:#e10600;color:#fff;border-radius:999px;padding:26px 64px;font:800 50px HB;transform:scale(${bo(P(t,.9,1.3))})">LINK EN MI PERFIL</div>
+  </div>`},
+];
+if(window.DUR)scenes.forEach((s,i)=>{if(DUR[i])s.d=DUR[i]});
+let acc=0;for(const s of scenes){s.s=acc;acc+=s.d}
+window.TOTAL=acc;
+const bg=document.getElementById('bg'),st=document.getElementById('stage');
+window.render=function(T){
+  let i=scenes.findIndex(s=>T<s.s+s.d);if(i<0)i=scenes.length-1;
+  const s=scenes[i],t=T-s.s;
+  // light/dark background with crossfade at scene boundary
+  const L1=!!s.light;
+  const glowY=1250+Math.sin(T*.6)*120, glowX=540+Math.cos(T*.4)*160;
+  bg.style.background=L1?`radial-gradient(900px 900px at ${glowX}px ${glowY}px, rgba(225,6,0,.10), transparent 70%), #f1f1f1`
+     :`radial-gradient(1000px 1000px at ${glowX}px ${glowY}px, rgba(225,6,0,.33), transparent 70%), #0a0a0a`;
+  const exit=s.end?0:P(t,s.d-.2,s.d), ent=1-P(t,0,.12);
+  const push=1+0.035*(t/s.d);
+  st.innerHTML=`<div style="position:absolute;inset:0;transform:scale(${push}) translateY(${-exit*140+ent*60}px);filter:blur(${exit*22+ent*14}px);opacity:${1-exit*0.9}">${s.f(t)}</div>`;
+};
+render(0);
+</script></body></html>
