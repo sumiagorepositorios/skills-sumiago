@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:H;src:local('Inter Display Black'),local('Inter Black'),url(fonts/InterDisplay-Black.otf)}
+@font-face{font-family:HB;src:local('Inter Display ExtraBold'),local('Inter ExtraBold'),url(fonts/InterDisplay-ExtraBold.otf)}
+@font-face{font-family:M;src:local('Inter Medium'),url(fonts/Inter-Medium.otf)}
+@font-face{font-family:S;src:local('Crimson Text SemiBold Italic'),url(fonts/CrimsonText-SemiBoldItalic.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0a0a0a}
+#bg{position:absolute;inset:0}
+#stage{position:absolute;inset:0;font-family:M;color:#f4f4f4}
+.sc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding-top:330px;transform-origin:50% 40%;text-align:center}
+.l{display:block;overflow:hidden;line-height:1.02;padding:0 6px 10px}
+.w{display:inline-block;will-change:transform}
+.big{font-family:H;font-size:170px;letter-spacing:-6px;line-height:.92}
+.mid{font-family:HB;font-size:96px;letter-spacing:-3px}
+.sm{font-family:M;font-size:56px;color:#9a9a9a}
+.ser{font-family:S;font-size:150px;color:#ff3b30;letter-spacing:-1px}
+.red{color:#ff2a1f}
+.box{background:#e10600;color:#fff;padding:0 22px;border-radius:14px}
+.strike{position:relative}
+.strike i{position:absolute;left:-10px;top:52%;height:16px;background:#ff2a1f;border-radius:8px}
+.card{background:#151515;border:2px solid #262626;border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative}
+.lcard{background:#fff;border:2px solid #ddd;border-radius:34px;box-shadow:0 30px 70px rgba(0,0,0,.12);position:relative;color:#111}
+.cur{position:absolute;width:70px;height:70px;z-index:50}
+.cur span{position:absolute;left:46px;top:52px;background:#e10600;color:#fff;font:700 26px M;padding:4px 12px;border-radius:8px;white-space:nowrap}
+.caret{display:inline-block;width:10px;background:#ff2a1f;margin-left:6px;vertical-align:-8px}
+.light{color:#111}
+.tag{display:inline-block;font:800 34px HB;letter-spacing:3px;padding:8px 22px;border-radius:10px;background:#e10600;color:#fff}
+.abs{position:absolute}
+</style></head>
+<body><div id="bg"></div><div id="stage"></div>
+<script src="dur.js"></script>
+<script>
+const W=1080,H=1920;
+const C=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const P=(t,a,b)=>C((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const bo=x=>{const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+function lerp(a,b,k){return a+(b-a)*k}
+
+// texto que sube desde una máscara
+function L(words,t,t0,cls='',st=.07){
+  let i=0;
+  const html=words.split('|').map(w=>{const k=eo(P(t,t0+i*st,t0+i*st+.38));i++;
+    return `<span class="w" style="transform:translateY(${(1-k)*115}%)">${w}</span>`}).join(' ');
+  return `<span class="l ${cls}">${html}</span>`;
+}
+function typed(s,t,t0,cps=18){return s.slice(0,Math.floor(C((t-t0)*cps,0,s.length)))}
+function caret(t,h=60,on=true){return on?`<span class="caret" style="height:${h}px;opacity:${Math.floor(t*2.4)%2?0:1}"></span>`:''}
+function cursor(x,y,label='Tú',sc=1){
+  return `<div class="cur" style="left:${x}px;top:${y}px;transform:scale(${sc})"><svg width="70" height="70" viewBox="0 0 24 24"><path d="M3 2l16 9-7 1.6-3.4 6.4z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg><span>${label}</span></div>`;
+}
+function strikeW(t,t0,dur=.3){return `<i style="width:calc(${eio(P(t,t0,t0+dur))*100}% + 20px)"></i>`}
+
+// galaxia de puntos (la "audiencia")
+let seed=11;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+const PTS=[...Array(240)].map(()=>({a:rnd()*6.283,r:Math.pow(rnd(),.55),z:rnd(),c:rnd(),k:rnd()}));
+function galaxy(t,cx,cy,R,o={}){
+  const sp=o.spread??1,op=o.op??1,gray=o.gray??0,fall=o.fall??0;
+  let s=`<div class="abs" style="left:${cx-R*.7}px;top:${cy-R*.45}px;width:${R*1.4}px;height:${R*.9}px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,${.55*op*(1-gray)}),rgba(225,6,0,${.35*op*(1-gray)}) 35%,transparent);transform:scale(${sp})"></div>`;
+  PTS.forEach((p,i)=>{
+    const ang=p.a+t*(.18+(1-p.r)*.55)+p.r*3.4, rr=(.08+p.r)*R*sp;
+    let x=cx+Math.cos(ang)*rr, y=cy+Math.sin(ang)*rr*.55;
+    const f=p.k<fall?1:0; y+=f*0; const sz=3+p.z*11;
+    const col=gray>.5?'#5a5a5a':p.c<.33?'#ff2a1f':p.c<.78?'#f4f4f4':'#8a8a8a';
+    s+=`<div class="abs" style="left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;border-radius:${p.z>.65?'3px':'50%'};background:${col};opacity:${op*(.35+.65*p.z)*(1-f*.85)}"></div>`;
+  });
+  return s;
+}
+function person(x,y,s,col='#f4f4f4',op=1,extra=''){
+  return `<svg class="abs" style="left:${x-s/2}px;top:${y-s/2}px;opacity:${op};${extra}" width="${s}" height="${s}" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="4.5" fill="${col}"/><path d="M3 23c0-5.5 4-9 9-9s9 3.5 9 9z" fill="${col}"/></svg>`;
+}
+function phone(w,h,inner,extra=''){
+  return `<div style="width:${w}px;height:${h}px;border-radius:${w*.14}px;background:#0d0d0d;border:6px solid #2c2c2c;box-shadow:0 40px 90px rgba(0,0,0,.7),0 0 0 2px #444 inset;position:relative;overflow:hidden;${extra}">
+   <div class="abs" style="left:50%;top:14px;width:${w*.3}px;height:22px;margin-left:-${w*.15}px;border-radius:12px;background:#000"></div>${inner}</div>`;
+}
+function senal(n,t){return `<div style="margin-bottom:26px;transform:scale(${bo(P(t,0,.3))})"><span class="tag">SEÑAL ${n}</span></div>`}
+
+const scenes=[
+// 0 gancho: galaxia + "TikTok" escrito por el cursor
+{d:3.6,f:t=>{const tk=typed('TikTok',t,.55,12);
+ return `${galaxy(t,540,1380,560,{spread:lerp(.4,1,eo(P(t,0,1.6))),op:eo(P(t,0,.8))})}
+  <div class="sc">
+   ${L('¿Cómo|decide',t,.05,'sm')}
+   <span class="l big"><span class="red">${tk}</span>${t<1.4?caret(t,140):''}</span>
+   ${L('a|quién|le|muestra',t,1.1,'mid')}
+   <span class="l big" style="margin-top:12px"><span class="w box" style="transform:scale(${bo(P(t,1.6,2.0))}) rotate(${(1-eo(P(t,1.6,2.05)))*-7}deg)">tu video?</span></span>
+  </div>${t<1.4?cursor(270+tk.length*102,560,'Sumiago'):''}`}},
+// 1
+{d:2.4,f:t=>`${galaxy(t+3.6,540,1420,560,{op:.7})}
+  <div class="sc" style="padding-top:520px">
+   ${L('CASI',t,0,'big')}
+   ${L('NADIE',t,.12,'big')}
+   <span class="l"><span class="w ser" style="font-size:210px;transform:translateY(${(1-eo(P(t,.45,.85)))*115}%)">lo sabe.</span></span>
+  </div>`},
+// 2 publicar -> no a todo el mundo
+{d:3.6,f:t=>{const cl=t>.95;
+ return `<div class="sc">
+   ${L('Cuando|lo|publicas…',t,0,'sm')}
+   <div style="margin:36px 0 70px;background:${cl?'#2a2a2a':'#e10600'};border-radius:999px;padding:30px 80px;font:800 54px HB;color:#fff;box-shadow:0 0 90px rgba(225,6,0,${cl?0:.45});transform:scale(${bo(P(t,.15,.5))*(t>.95&&t<1.12?.9:1)})">${cl?'✓ Publicado':'⬆ Publicar'}</div>
+   ${L('no|se|lo|muestra|a',t,1.15,'sm')}
+   <span class="l big"><span class="w strike" style="transform:translateY(${(1-eo(P(t,1.35,1.7)))*115}%)">TODO EL${strikeW(t,2.15)}</span></span>
+   <span class="l big"><span class="w strike" style="transform:translateY(${(1-eo(P(t,1.43,1.78)))*115}%)">MUNDO${strikeW(t,2.3)}</span></span>
+  </div>${cursor(lerp(880,640,eio(P(t,.3,.95))),lerp(1500,610,eio(P(t,.3,.95))),'Tú',t>.95&&t<1.1?.85:1)}`}},
+// 3 grupo pequeño
+{d:3.2,f:t=>{let ppl='';const n=14;for(let i=0;i<n;i++){const a=i/n*6.283-1.57+t*.25;const k=bo(P(t,.9+i*.05,1.25+i*.05));ppl+=person(540+Math.cos(a)*300,1330+Math.sin(a)*230,80*k,i%4==0?'#ff2a1f':'#f4f4f4',C(k))}
+ return `<div class="sc">
+   ${L('Primero|lo|prueba',t,0,'mid')}
+   ${L('con|un|grupo',t,.25,'sm')}
+   <span class="l"><span class="w ser" style="font-size:200px;transform:translateY(${(1-eo(P(t,.45,.85)))*115}%)">pequeño.</span></span>
+  </div>
+  <div class="abs" style="left:540px;top:1330px;transform:translate(-50%,-50%) scale(${eo(P(t,.6,1))})">${phone(170,300,`<div class="abs" style="inset:40px 14px;border-radius:14px;background:linear-gradient(160deg,#4a0b08,#1b1b1b);display:flex;align-items:center;justify-content:center;font-size:60px;color:#fff">▶</div>`)}</div>
+  ${ppl}`}},
+// 4 cuatro señales
+{d:2.8,f:t=>{const items=['⏱','▬','↻','💬'];
+ return `<div class="sc">
+   ${L('y|se|fija|en',t,0,'sm')}
+   <div style="display:flex;align-items:center;gap:30px;margin-top:10px">
+    <span class="l" style="font-family:H;font-size:380px;letter-spacing:-10px;line-height:.9"><span class="w red" style="transform:translateY(${(1-eo(P(t,.15,.55)))*115}%)">4</span></span>
+    ${L('SEÑALES',t,.3,'mid')}</div>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:70px">${items.map((ic,i)=>{const k=bo(P(t,.7+i*.12,1.05+i*.12));
+     return `<div class="card" style="width:330px;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:scale(${k})"><div style="font-size:80px;color:#ff4a40;filter:grayscale(${i==3?1:0})">${ic}</div><div style="font:800 34px HB;color:#777;margin-top:10px">${i+1}</div></div>`}).join('')}</div>
+  </div>`}},
+// 5 señal 1: tres segundos
+{d:3.4,f:t=>{const sec=C((t-.7)*1.6,0,3);const ring=sec/3;let ppl='';
+ for(let i=0;i<10;i++){const gone=[2,5,8].includes(i)&&t>2.5;const k=P(t,2.5+i*.03,2.9+i*.03);
+   ppl+=person(150+(i%5)*195,1490+Math.floor(i/5)*190+(gone?eo(k)*60:0),120,gone?'#555':'#f4f4f4',gone?1-k*.7:1,gone?`transform:translateX(${eo(k)*-160}px)`:'')}
+ return `<div class="sc">
+   ${senal(1,t)}
+   ${L('¿Se|quedaron|los',t,.1,'mid')}
+   ${L('primeros',t,.25,'mid')}
+   <div style="position:relative;margin-top:40px;width:330px;height:330px;transform:scale(${bo(P(t,.35,.7))})">
+    <svg width="330" height="330" viewBox="0 0 100 100" style="transform:rotate(-90deg)"><circle cx="50" cy="50" r="44" fill="none" stroke="#262626" stroke-width="8"/><circle cx="50" cy="50" r="44" fill="none" stroke="#ff2a1f" stroke-width="8" stroke-linecap="round" stroke-dasharray="${276.5*ring} 300"/></svg>
+    <div class="abs big" style="inset:0;display:flex;align-items:center;justify-content:center;font-size:120px">0:0${Math.floor(sec)}</div></div>
+   ${L('segundos?',t,.5,'sm')}
+  </div>${ppl}`}},
+// 6 señal 2: hasta el final
+{d:2.8,f:t=>{const k=eio(P(t,.5,2.3));
+ return `<div class="sc">
+   ${senal(2,t)}
+   ${L('¿Lo|vieron',t,.1,'mid')}
+   ${L('hasta|el',t,.25,'mid')}
+   <span class="l"><span class="w ser" style="font-size:200px;transform:translateY(${(1-eo(P(t,.4,.8)))*115}%)">final?</span></span>
+   <div style="margin-top:60px;transform:scale(${eo(P(t,.3,.65))})">${phone(420,600,`<div class="abs" style="inset:60px 26px 90px;border-radius:24px;background:linear-gradient(160deg,#4a0b08,#1b1b1b);display:flex;align-items:center;justify-content:center;font-size:110px;color:#fff">${k>=1?'✓':'▶'}</div>
+     <div class="abs" style="left:26px;right:26px;bottom:50px;height:14px;border-radius:7px;background:#333;overflow:hidden"><div style="height:100%;width:${k*100}%;background:#ff2a1f"></div></div>`)}</div>
+  </div>`}},
+// 7 señal 3: lo volvieron a ver
+{d:2.6,f:t=>{const n=t>1.3?2:1;
+ return `<div class="sc">
+   ${senal(3,t)}
+   ${L('¿Lo|volvieron',t,.1,'mid')}
+   ${L('a|ver?',t,.25,'big')}
+   <div style="margin-top:90px;display:flex;align-items:center;gap:40px;transform:scale(${bo(P(t,.35,.7))})">
+    <div style="font-size:300px;line-height:1;color:#ff2a1f;transform:rotate(${eio(P(t,.6,1.4))*360}deg)">↻</div>
+    <div class="box big" style="font-size:150px;padding:10px 40px;transform:scale(${t>1.3?bo(P(t,1.3,1.6)):1})">×${n}</div></div>
+  </div>`}},
+// 8 señal 4: comentaron
+{d:2.6,f:t=>{const cm=['¡Justo esto buscaba!','Quiero saber más','¿Cómo lo haces?'];
+ return `<div class="sc">
+   ${senal(4,t)}
+   <span class="l"><span class="w ser" style="font-size:180px;transform:translateY(${(1-eo(P(t,.1,.5)))*115}%)">¿Comentaron?</span></span>
+   <div style="margin-top:70px;display:flex;flex-direction:column;gap:26px;align-items:center">${cm.map((c,i)=>{const k=bo(P(t,.5+i*.22,.85+i*.22));
+     return `<div class="card" style="display:flex;align-items:center;gap:24px;padding:26px 40px;transform:scale(${k}) translateX(${(i-1)*40}px);opacity:${C(k)}"><div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,${i%2?'#777':'#e10600'},#333)"></div><div style="font:600 44px M;color:#eee">${c}</div><div style="font-size:48px;color:#ff2a1f">♥</div></div>`}).join('')}</div>
+  </div>`}},
+// 9 grupos cada vez más grandes
+{d:5.4,f:t=>{let s='';const rings=[[150,8,1.0],[290,16,2.2],[440,26,3.4]];
+ rings.forEach(([R,n,t0],ri)=>{const k=eo(P(t,t0,t0+.7));
+   s+=`<div class="abs" style="left:${540-R}px;top:${1330-R*.75}px;width:${R*2}px;height:${R*1.5}px;border-radius:50%;border:4px solid rgba(225,6,0,${.7*k});transform:scale(${k})"></div>`;
+   for(let i=0;i<n;i++){const a=i/n*6.283+ri*.4+t*.08;const kk=bo(P(t,t0+i*.02,t0+.35+i*.02));s+=person(540+Math.cos(a)*R,1330+Math.sin(a)*R*.75,(60-ri*8)*kk,ri==2&&i%3==0?'#ff2a1f':'#f4f4f4',C(kk))}});
+ return `<div class="sc">
+   ${L('Si|ese|grupo',t,0,'sm')}
+   <span class="l big"><span class="w box" style="transform:scale(${bo(P(t,.25,.6))})">responde,</span></span>
+   ${L('lo|pasa|a|uno',t,.8,'mid')}
+   ${L('<span class="red">más|grande…</span>',t,1.0,'mid')}
+   ${L('y|a|otro…',t,2.2,'sm')}
+   ${t>3.4?L('y|a|otro.',t,3.4,'sm'):''}
+  </div>
+  <div class="abs" style="left:540px;top:1330px;transform:translate(-50%,-50%)">${phone(110,190,`<div class="abs" style="inset:26px 10px;border-radius:10px;background:#4a0b08;display:flex;align-items:center;justify-content:center;font-size:40px;color:#fff">▶</div>`)}</div>
+  ${s}`}},
+// 10 si no, ahí se queda
+{d:2.8,f:t=>{const g=P(t,.5,1.3);
+ return `${galaxy(t,540,1420,520,{spread:lerp(1,.25,eio(g)),gray:g,op:1-g*.5})}
+  <div class="sc" style="padding-top:470px">
+   ${L('Si|no|responde…',t,0,'sm')}
+   ${L('AHÍ|SE',t,.6,'big" style="color:#8a8a8a')}
+   <span class="l"><span class="w ser" style="font-size:220px;color:#777;transform:translateY(${(1-eo(P(t,.9,1.3)))*115}%)">queda.</span></span>
+  </div>`}},
+// 11 ASÍ NO (acto claro)
+{d:4.2,light:true,f:t=>{const tx=typed('Hola, bienvenidos…',t,1.0,12);
+ return `<div class="sc">
+   ${L('Por|eso|este|video',t,0,'mid light')}
+   ${L('no|empezó|con:',t,.3,'sm')}
+   <div class="lcard" style="width:900px;margin-top:80px;padding:40px 44px 50px;text-align:left;transform:translateY(${(1-eo(P(t,.5,1)))*300}px) rotate(${t>2.9?eo(P(t,2.9,3.4))*-3:0}deg);filter:grayscale(${P(t,2.9,3.3)})">
+    <span class="tag" style="background:#555">ASÍ NO</span>
+    <div style="margin-top:30px;font:800 64px HB;letter-spacing:-1px;line-height:1.15"><span class="strike">${tx}${strikeW(t,2.7,.4)}</span>${t>.9&&t<2.6?caret(t,60):''}</div>
+    <div style="display:flex;gap:16px;margin-top:34px">${[0,1,2,3,4].map(i=>{const k=P(t,3.0+i*.08,3.5+i*.08);return person(0,0,70,'#999',1-k,`position:relative;left:35px;top:35px;transform:translate(${eo(k)*-120}px,${eo(k)*-90}px)`)}).join('')}<div style="font:600 34px M;color:#999;align-self:center;margin-left:40px;opacity:${P(t,3.2,3.5)}">← se van</div></div>
+   </div>
+  </div>`}},
+// 12 ASÍ SÍ
+{d:3.2,light:true,f:t=>`<div class="sc">
+   ${L('Empezó|con|una',t,0,'mid light')}
+   <span class="l"><span class="w ser" style="font-size:220px;color:#e10600;transform:translateY(${(1-eo(P(t,.25,.65)))*115}%)">pregunta.</span></span>
+   <div class="lcard" style="width:900px;margin-top:70px;padding:40px 44px 46px;text-align:left;border:4px solid #e10600;transform:scale(${bo(P(t,.6,1.0))})">
+    <span class="tag">ASÍ SÍ</span>
+    <div style="margin-top:28px;font:800 64px HB;letter-spacing:-1px;line-height:1.15">¿Cómo decide TikTok a quién le muestra <span class="box">tu video?</span></div>
+    <div style="display:flex;gap:16px;margin-top:34px">${[0,1,2,3,4,5,6].map(i=>person(0,0,70,i%3==0?'#e10600':'#222',C(bo(P(t,1.2+i*.08,1.5+i*.08))),`position:relative;left:35px;top:35px;transform:scale(${bo(P(t,1.2+i*.08,1.5+i*.08))})`)).join('')}<div style="font:600 34px M;color:#e10600;align-self:center;margin-left:40px;opacity:${P(t,1.8,2.1)}">se quedan</div></div>
+   </div>
+  </div>`},
+// 13 ya sabes
+{d:2.6,light:true,f:t=>`<div class="sc" style="padding-top:600px">
+   ${L('Ahora|ya|sabes',t,0,'mid light')}
+   ${L('CÓMO',t,.25,'big light')}
+   <span class="l"><span class="w ser" style="font-size:240px;color:#e10600;transform:translateY(${(1-eo(P(t,.45,.85)))*115}%)">piensa.</span></span>
+  </div>`},
+// 14 CTA
+{d:6.2,f:t=>{const liked=t>4.1;
+ return `${galaxy(t,540,1700,420,{op:.45})}<div class="sc">
+   ${L('¿Quieres|saber|cómo',t,0,'mid')}
+   ${L('crear|videos|<span class="ser" style="font-size:120px">así?</span>',t,.2,'mid')}
+   ${L('Comenta',t,1.6,'sm')}
+   <span class="l" style="font-family:H;font-size:200px;letter-spacing:-7px;line-height:.95"><span class="w red" style="transform:translateY(${(1-eo(P(t,1.8,2.2)))*115}%) scale(${1+0.035*Math.sin(t*5)})">SUMIAGO</span></span>
+   <div class="card" style="width:900px;margin-top:50px;padding:36px 40px;text-align:left;transform:translateY(${(1-eo(P(t,2.2,2.7)))*300}px)">
+     <div style="font:700 32px M;color:#888;margin-bottom:26px">Comentarios</div>
+     <div style="display:flex;align-items:center;gap:24px"><div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#e10600,#555)"></div>
+       <div style="flex:1"><div style="font:500 28px M;color:#888">tú · ahora</div><div style="font:800 52px HB">${typed('SUMIAGO',t,2.7,8)}${t<3.7&&t>2.6?caret(t,46):''}</div></div>
+       <div style="font-size:64px;color:${liked?'#ff2a1f':'#555'};transform:scale(${liked?bo(P(t,4.1,4.4)):1})">${liked?'♥':'♡'}</div></div></div>
+   ${L('y|te|envío|la|<span class="ser" style="font-size:96px">información.</span>',t,3.0,'sm')}
+  </div>${cursor(lerp(900,925,eio(P(t,3.5,4.1))),lerp(1750,1075,eio(P(t,3.5,4.1))),'Sumiago',t>4.1&&t<4.25?.85:1)}`}},
+// 15 logo
+{d:3.4,light:true,end:true,f:t=>`<div class="sc" style="padding-top:0;justify-content:center">
+   <img src="logo-sumiago.png" style="width:900px;transform:scale(${bo(P(t,.1,.6))})">
+   <div style="margin-top:60px;background:#e10600;color:#fff;border-radius:999px;padding:28px 70px;font:800 56px HB;transform:scale(${bo(P(t,.7,1.1))})">LINK EN MI PERFIL</div>
+  </div>`},
+];
+if(window.DUR)scenes.forEach((s,i)=>{if(DUR[i])s.d=DUR[i]});
+let acc=0;for(const s of scenes){s.s=acc;acc+=s.d}
+window.TOTAL=acc;
+const bg=document.getElementById('bg'),st=document.getElementById('stage');
+window.render=function(T){
+  let i=scenes.findIndex(s=>T<s.s+s.d);if(i<0)i=scenes.length-1;
+  const s=scenes[i],t=T-s.s;
+  const glowY=1250+Math.sin(T*.6)*120, glowX=540+Math.cos(T*.4)*160;
+  bg.style.background=s.light?`radial-gradient(900px 900px at ${glowX}px ${glowY}px, rgba(225,6,0,.10), transparent 70%), #f1f1f1`
+     :`radial-gradient(1000px 1000px at ${glowX}px ${glowY}px, rgba(225,6,0,.28), transparent 70%), #0a0a0a`;
+  const exit=s.end?0:P(t,s.d-.2,s.d), ent=1-P(t,0,.12);
+  const push=1+0.035*(t/s.d);
+  st.innerHTML=`<div style="position:absolute;inset:0;transform:scale(${push}) translateY(${-exit*140+ent*60}px);filter:blur(${exit*22+ent*14}px);opacity:${1-exit*0.9}">${s.f(t)}</div>`;
+};
+render(0);
+</script></body></html>
